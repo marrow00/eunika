@@ -1,0 +1,568 @@
+html {
+	font-family:'Arima Madurai',sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	/*background: rgba(185,223,247,0.5)*/
+	/*background-image: radial-gradient(circle farthest-corner at 50% 50%,#03baaa,#00645a);*/
+}
+
+div {
+	display: block;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 3rem;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	color: #fff;
+}
+
+h2 {
+	font-size: 2rem;
+	display: inline-block;
+	margin: 0;
+	color: #fff;
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin: 0;
+	color: #00645a;
+	text-align: middle;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+p{
+	margin: 0;
+	/*color: #323232;*/
+	color: #fff;
+}
+
+
+/*N A V I G A T I O N*/
+.nav{
+
+}
+
+.nav-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.nav-button{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 40px;
+	height: 40px;
+	z-index: 9999;
+}
+
+/*S T A R T*/
+.start {
+	width: 100%;
+	height: 700px;
+	clip-path: polygon(0 0, 1600px 0, 1600px 85%, 0 100%);
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/las.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	border: 10px;
+	/*z-index: -100;*/
+}
+
+.diamond {
+	width: 100px;
+	height: 100px;
+	transform: rotate(45deg);
+	background: rgba(255,255,255,0.1);
+	border: 5px solid #fff;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	display: flex;
+	align-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    cursor: default;
+}
+
+#header-diamond{
+	width: 200px;
+	height: 200px;
+}
+
+.header-cnt{
+	transform: rotate(-45deg);
+	color: #fff;
+	cursor: default;
+}
+
+#contact-diamond {
+	width: 200px;
+	height: 200px;
+}
+
+.contact-content {
+	transform: rotate(-45deg);
+	color: #fff;
+}
+
+.start-link {
+	color: #fff;
+}
+
+.menu-diamond{
+	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.6s ease;
+}
+
+.menu_text{
+	font-size: 1.2rem;
+	color: #fff;
+	background: rgba(#fff, .3);
+}
+
+#menu_1{
+	background-image: linear-gradient(0deg,rgba(255,255,255,.2),rgba(255,255,255,.2)),url(../images/woman.png);	
+	background-size: cover;
+}
+
+#menu_2{
+	background-image: linear-gradient(0deg,rgba(255,255,255,.2),rgba(255,255,255,.2)),url(../images/education.png);	
+	background-size: cover;
+}
+
+#menu_3{
+	background-image: linear-gradient(0deg,rgba(255,255,255,.2),rgba(255,255,255,.2)),url(../images/science.png);	
+	background-size: cover;
+}
+
+#menu_4{
+	background-image: linear-gradient(0deg,rgba(255,255,255,.2),rgba(255,255,255,.2)),url(../images/link.png);	
+	background-size: cover;
+}
+
+#img-diamond {
+	width: 300px;
+	height: 300px;
+}
+
+.start-image{
+	max-width: 300px;
+	height: auto;
+	vertical-align: middle;
+	transform: rotate(-45deg);
+}
+
+.menu-image{
+	max-width: 60px;
+	height: auto;
+	transform: rotate(-45deg);
+	vertical-align: middle;
+}
+
+.menu-text{
+	text-transform: uppercase;
+	vertical-align: middle;
+	font-weight: lighter;
+	transform: rotate(-45deg);
+	color: #fff;
+	visibility: hidden;
+}
+
+.menu-text:hover{
+	visibility: visible;
+}
+
+
+/*S E C T I O N S*/
+.section_marker{
+ 	position: absolute;
+/* 	right: 10px;*/
+ 	margin-top: 20px;
+ 	width: 100%;
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: flex-end;
+ 	
+}
+.section_title{
+	width: 200px;
+	background-color: rgba(239, 206, 26,.9);
+	float: right;
+}
+/* A B O U T  M E*/
+.about_me{
+	width: 100%;
+	height: 500px;
+	clip-path: polygon(0 0, 1600px 0, 1600px 85%, 0 100%);
+	/*background: rgba(185,223,247,0.5);*/
+}
+.me_slides{
+	position: relative;
+	height: 100%;
+	margin: 0 300px 0 50px;
+	text-align: center;
+}
+.me_description{
+	padding: 20px;
+	text-align: justify;
+	display: none;
+	/*position: absolute;
+	display: flex;
+  	justify-content: center;
+  	align-items: center; */
+	/*position: absolute;
+	vertical-align: middle;*/
+	/*background: #fff;*/
+}
+.description{
+	color: #282828;
+	font-size: 1.2rem;
+}
+.desc_past{
+	margin-top: 100px;
+}
+.desc_present{
+	margin-top: 100px;
+}
+.desc_future{
+	margin-top: 100px;
+}
+
+.me_dots{
+	position: absolute;
+    bottom: 30px;
+    display: inline-block;
+}
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  /*border-radius: 50%;*/
+  transform: rotate(45deg);
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+
+.about_photo{
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	right: 0;
+	/*background-image: url(../images/about_img.jpg);*/
+	background-color: #00645a;
+	/*background-attachment: scroll;*/
+	/*float: right;*/
+	clip-path: polygon(15% 0, 1600px 0, 1600px 100%, 0 100%);
+}
+.contact{
+	height: auto;
+    margin: 250px 10px 10px 0;
+    font-size: 1.2rem;
+    float: right;
+    color: #fff;
+}
+
+.contact_img{
+	max-width: 20px;
+	height: auto;
+}
+.contact_link{
+	color: #fff;
+}
+.contact_link:hover{
+	color: #bbb;
+}
+/*e n d  o f  d e s c r i p t i o n*/
+
+/* L E C T U R E S */
+.lectures{
+	width: 100%;
+	height: 600px;
+	/*background-image: url(../images/lectures.jpeg);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/lectures.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+	clip-path: polygon(0 0, 1600px 0, 1600px 85%, 0 100%);
+	font-size: 1.2rem;
+	z-index: -100;
+}
+/*.lectures::before{
+	background-color: rgba(188,218,206,0.5);
+	width: 100%;
+	height: 100%;
+	content: '';
+  	display: block;
+}*/
+/*.lectures::before{
+	background: linear-gradient(0deg, rgba(236,21,97,.4),rgba(236,21,97,.4));
+	clip-path: polygon(0 0, 1600px 80%, 1600px 100%, 0 90%);
+}*/
+
+.lectures_content{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	float: left;
+	justify-content: center;
+	margin: 100px 10px 10px 50px;
+	color: #fff;
+}
+
+.lecture {
+	/*flex-grow: 1;*/
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 150px;
+	border: 1px #fff solid;
+	text-align: center;
+	padding: 5px;
+	margin: 10px;
+	background: rgba(255,255,255,.1);
+	/*background: rgba(0,100,90,.7);*/
+}
+
+/*science*/
+.science{
+	width: 100%;
+	/*background-image: radial-gradient(circle farthest-corner at 50% 50%,#fff,#B9DFF7);*/
+}
+
+.science_section_marker{
+	width: 100%;
+	height: 100px;
+}
+
+.science_el{
+	margin: 30px 30px 30px 50px;
+	/*border: 1px #00645a;*/
+	/*padding-right: 20px*/
+}
+
+.science_title{
+	column-span: all;
+	/*color: rgb(248,201,223);*/
+}
+
+/*.science_el-1{
+	background-image: url(../images/cooperation.jpg);
+	background-size: cover;
+	background: #d15850;
+}*/
+
+.subsection{
+	width: 100%;
+	height: 50px;
+	float: left;
+	padding-left: 10px;
+}
+
+/*c o o p e r a t i o n*/
+.cooperation_columns{
+/*	columns: 3 300px;*/
+	/*position: absolute;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	clear: both;
+}
+
+.cooperation_company{
+	width: 150px;
+	height: 150px;
+	/*border: 3px #fff solid;*/
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	margin: 20px;
+}
+.company{
+	visibility: hidden;
+}
+
+/*.people{
+	visibility: hidden;
+}*/
+.ifpan{
+	/*background-image: url(../images/logos/ifpan_logo.jpg);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/logos/ifpan_logo.jpg);
+	background-size: cover;
+}
+.wemif{
+	/*background-image: url(../images/logos/wemif_logo.png);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/logos/wemif_logo.png);
+	background-size: cover;
+}
+.imim{
+	/*background-image: url(../images/logos/imim_logo.png);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/logos/imim_logo.png);
+	background-size: cover;
+}
+.tud{
+	/*background-image: url(../images/logos/tud_logo.png);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/logos/tud_logo.png);
+	background-size: cover;
+}
+.unipress{
+	/*background-image: url(../images/logos/unipress_logo.png);*/
+	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/logos/unipress_logo.png);	
+	background-size: cover;
+}
+/*e n d  o f  c o o p e r a t i o n*/
+
+/*p r o j e c t s */
+/*.science_el-2{
+	background-image: url(../images/projects.jpg);
+	background-size: cover;
+}*/
+
+.projects_columns{
+	/*position: absolute;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	clear: both;
+}
+
+.project{
+	width: 300px;
+	height: 200px;
+	border: 1px rgba(209, 88, 80,.4) solid;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	margin: 20px;
+	cursor: pointer;
+	/*border: 5px #03baaa solid;*/
+	background: rgba(255,255,255,.4);
+}
+.project:hover{
+	background: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7));
+}
+
+.project_title{
+	font-size: 1.2rem;
+	color: #282828;
+	/*cursor: pointer;*/
+	padding: 5px;
+}
+
+/*.project_title:hover{
+	color: rgb(239, 206, 26);
+}*/
+.project_description{
+	padding: 5px;
+	text-align: left;
+	color: #282828;
+	cursor: pointer;
+}
+/*e n d  o f  p r o j e c t s*/
+
+/*a r t i c l e s*/
+/*.science_el-3{
+	background-image: url(../images/articles.jpg);
+	background-size: cover;
+}*/
+
+.articles_columns{
+	/*position: absolute;*/
+	display: flex;
+	flex-direction: column;
+	clear: both;
+}
+
+.article{
+	/*width: 100%;*/
+	/*height: auto;*/
+	columns: 2 300px;
+	column-gap: 2em;
+	border: 1px rgba(209, 88, 80,.4) solid;
+	margin: 10px;
+}
+
+.article_p{
+	/*background-color: rgba(255,255,255,.3);*/
+	color: #282828;
+	margin-bottom: 5px;
+	padding: 5px;
+	text-align: justify;
+}
+.italic{
+	font-style: italic;
+	/*color: #282828;*/
+}
+.bold{
+	font-weight: bold;
+}
+/*e n d  o f  a r t i c l e s*/
+
+/* L I N K S */
+.links{
+	width: 100%;
+	height: 200px;
+	/*padding: 10px;*/
+	background-color: #00645a;
+	clip-path: polygon(0 15%, 1600px 0, 1600px 100%, 0 100%);
+	/*clip-path: polygon(0 0, 1600px 40%, 1600px 100%, 0 100%);*/
+	/*background-image: linear-gradient(0deg,rgba(0,100,90,.5),rgba(0,100,90,.5)),url(../images/links.jpg);*/
+	/*background-size: cover;*/
+/*	background-image: url(../images/links.jpg);
+	background-color: rgba(248,201,223,0.5);
+*/
+}
+
+
+.links_columns{
+	margin: 50px 0 0 10px;
+	display: flex;
+	flex-direction: row;
+	float: left;
+}
+.link_div{
+	margin-top: 30px;
+	width: 100px;
+	height: 100px;
+}
+
+.visible{
+	display:block;
+}
+
+.invisible{
+	display:none;
+}
+
+#menu_1{
+	display:block;
+}
+
+#menu_1d{
+	display:block;
+	visibility:hidden;
+}
