@@ -237,7 +237,7 @@ img{
 	border: 10px;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-	-webkit-clip-path: url("#swg_d");
+	/*-webkit-clip-path: url("#swg_d");*/
   	clip-path: url("#swg_d");
 	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/las.jpg);
 	background-size: cover;
@@ -477,7 +477,7 @@ img{
 	height: 500px;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-	-webkit-clip-path: url("#swg_d");
+	/*-webkit-clip-path: url("#swg_d");*/
  	clip-path: url("#swg_d");
 }
 .me_slides{
@@ -544,7 +544,7 @@ img{
 	background-color: #00645a;
 	-webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 	clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-	-webkit-clip-path: url("#swg_s");
+	/*-webkit-clip-path: url("#swg_s");*/
   	clip-path: url("#swg_s");
 }
 .contact{
@@ -650,7 +650,7 @@ img{
 	background-attachment: fixed;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-	-webkit-clip-path: url("#swg_d");
+	/*-webkit-clip-path: url("#swg_d");*/
   	clip-path: url("#swg_d");
 	font-size: 1.2rem;
 	z-index: -100;
@@ -895,7 +895,7 @@ img{
 	background-color: #00645a;
 	-webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-	-webkit-clip-path: url("#swg_h");
+	/*-webkit-clip-path: url("#swg_h");*/
   	clip-path: url("#swg_h");
 }
 
