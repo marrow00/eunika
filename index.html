@@ -12,15 +12,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai">
    </head>
 
-   <body id="body">
+   <body>
+   		<div class="mobile">
+   			<div class="mobile_title">
+   				<p>Trochę tu ciasno...</p>
+   			</div>
+   			<div class="mobile_desc">
+   				<p>Spróbuj odwrócić telefon albo otwórz tę stronę na tablecie lub komputerze.</p>
+   			</div>
+   		</div>
    		<main>
    			<div class="nav">
-   				<div class="nav-box">
-   					
-   				</div>
-   				<div class="nav-button">
-   					
-   				</div>	
+   				<button id="menu-button" class="menu-button" type="button">
+                	<span class="menu-button_span"></span>
+                	<span class="menu-button_span"></span>
+                	<span class="menu-button_span"></span>
+                	<span class="menu-button_span"></span>
+              	</button>
+   				<ul class ="menu-list" id="menu">
+   					<li class="menu-item"><a href=#start class="menu-link">Strona główna</a></li>
+   					<li class="menu-item"><a href=#about class="menu-link">O mnie</a></li>
+   					<li class="menu-item"><a href=#classes class="menu-link">Dydaktyka</a></li>
+   					<li class="menu-item"><a href=#cooperation class="menu-link">Współpraca</a></li>
+   					<li class="menu-item"><a href=#projects class="menu-link">Projekty</a></li>
+   					<li class="menu-item"><a href=#articles class="menu-link">Artykuły</a></li>
+   					<li class="menu-item"><a href=#link class="menu-link">Linki</a></li>
+   				</ul>				
+   				
    			</div>
    			<div class="start" id="start">
    				<div class="diamond" id="header-diamond">
@@ -31,26 +49,11 @@
    				</div>
    				<div class="diamond" id="contact-diamond">
    					<h1 class="header-cnt">Zielony</h1>
-   					<!-- <p class="contact-content"><a href="mailto:eunika.zielony@pwr.edu.pl" class="start-link">eunika.zielony@pwr.edu.pl</a></p>
-   					<br/>
-   					<p class="contact-content"><a href="tel:+48713202642" class="start-link">+48713202642</a></p> -->
    				</div>
    				<div class="diamond menu-diamond" id="menu_1" title="O mnie" onclick="clickDiamond('about')"></div>
-   				<!-- <div class="diamond menu-diamond" id="menu_1d" onclick="clickDiamond('about')">
-   					<a href="#about"><p class="menu-text">O mnie</p></a>
-   				</div> -->
    				<div class="diamond menu-diamond" id="menu_2" title="Dydaktyka" onclick="clickDiamond('classes')"></div>
-   				<!-- <div class="diamond menu-diamond invisible" id="menu_2d">
-   					<p class="menu-text">Zajęcia</p>
-   				</div> -->
    				<div class="diamond menu-diamond" id="menu_3" title="Praca naukowa" onclick="clickDiamond('science')"></div>
-   				<!-- <div class="diamond menu-diamond invisible" id="menu_3d">
-   					<p class="menu-text">Praca naukowa</p>
-   				</div> -->
    				<div class="diamond menu-diamond" id="menu_4" title="Linki" onclick="clickDiamond('link')"></div>
-   				<!-- <div class="diamond menu-diamond invisible" id="menu_4d">
-   					<p class="menu-text">Linki</p>
-   				</div> -->
    			</div>
    			<div class="about_me" id="about">
    				<div class="about_photo">
@@ -88,7 +91,7 @@
 					</div>
 					<div class="me_description">
 						<p class="description desc_future">
-						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI (ZnO, ZnMgO, CdTe, ZnTe, i in.), mających zastosowanie w przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: mikroskopia sił atomowych (AFM), spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V), metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
+						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI <span class="big_desc">(ZnO, ZnMgO, CdTe, ZnTe, i in.)</span> mających zastosowanie w przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: <span class="big_desc">mikroskopia sił atomowych (AFM)</span><span class="small_desc" >AFM</span>, spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk <span class="big_desc">prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V)</span><span class="small_desc" >I-V orac C-V</span>, metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
 					</div>
 					<div class="me_dots">
 						<span class="dot" onclick="currentSlide(0)"></span>
@@ -97,11 +100,27 @@
 					</div>
 				</div>
    			</div>
+   			<svg width='0' height='0'>
+  				<defs>
+    				<clipPath id="swg_d" clipPathUnits="objectBoundingBox">
+      					<polygon points="0 0, 1 0, 1 0.85, 0 1" />
+    				</clipPath>
+  				</defs>
+  				<defs>
+    				<clipPath id="swg_h" clipPathUnits="objectBoundingBox">
+      					<polygon points="0 0.15, 1 0, 1 1, 0 1" />
+    				</clipPath>
+  				</defs>
+  				<defs>
+    				<clipPath id="swg_s" clipPathUnits="objectBoundingBox">
+      					<polygon points="0.15 0, 1 0, 1 1, 0 1" />
+    				</clipPath>
+  				</defs>
+			</svg>
    			<div class="lectures" id="classes">
-   			<!-- <div class="lectures_bg"></div> -->
    				<div class="section_marker"><div class="section_title"><h2>Dydaktyka</h2></div></div>
    				<div class="lectures_content">
-   					<div class="lecture"><p>Laboratorium Podstaw Fizyki</p><span class="flag_holder"></span></div>
+   					<div class="lecture"><p>Laboratorium Podstaw Fizyki</p></div>
    					<div class="lecture"><p>Laboratorium Fizyki Przyrządów Półprzewodnikowych</p></div>
    					<div class="lecture"><p>Ćwiczenia z Fizyki Ogólnej</p></div>
    					<div class="lecture"><p>Wykład z Fizyki Przyrządów Półprzewodnikowych</p></div>
@@ -193,49 +212,37 @@
    							<div class="article">
    								<p class="article_p">
 									W. Jacak, E. Popko, A. Henrykowski, <span class="bold">E. Zielony</span>, K. Gwozdz, G. Luka, R. Pietruszka, B. Witkowski, L. Wachnicki, M. Godlewski, Liann-Be Chang, Ming-Jer Jeng
-									<br><span class="italic">On the size dependence and spatial range 	for the plasmon effect in photovoltaic efficiency enhancement</span>
+									<br><span class="italic">On the size dependence and spatial range for the plasmon effect in photovoltaic efficiency enhancement</span>
 									<br>Solar Energy Materials &amp; Solar Cells 147 1–16 (2016)
 								</p>
-							<!-- </div> -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									<span class="bold">E. Zielony</span>, K. Olender, E. Płaczek-Popko, T. Wosiński, A. Racino, Z. Gumienny, G. Karczewski and S. Chusnutdinow
-									<br><span class="italic">Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by 	molecular beam epitaxy</span>
+									<br><span class="italic">Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by molecular beam epitaxy</span>
 									<br>Journal of Applied Physics, vol. 115, nr 24, art. 244501, s. 1-8 (2014)
 								</p>
-							<!-- </div> -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									M. Pietrzyk, <span class="bold">E. Zielony</span>, M. Stachowicz, A. Reszka, E. Popko, A. Wierzbicka, E. Przeździecka, A. 	Droba, A. Kozanecki
-									<br><span class="italic">Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si 	(111) by PA-MBE method</span>
+									<br><span class="italic">Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si (111) by PA-MBE method</span>
 									<br>Journal of Alloys and Compounds, vol. 587, s. 724-728 (2014)
 								</p>
-							<!-- </div> -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									<span class="bold">E. Zielony</span>, E. Płaczek-Popko, P. Nowakowski, Z. Gumienny, A. Suchocki and G. Karczewski,
 									<br><span class="italic">Electro-optical characterization of Ti/Au-ZnTe Schottky diodes with&nbsp;CdTe&nbsp;quantum&nbsp;dots</span>
 									<br>Mat. Chem. 	Phys. 134, 821-828 (2012)
 								</p>
-							<!-- </div> -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									<span class="bold">E. Zielony</span>, E. Placzek-Popko, A. Henrykowski, Z. Gumienny, P. Kamyczek, J. Jacak, P. Nowakowski, 	G. Karczewski
-									<br><span class="italic">Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman 	and AFM spectroscopy</span>
+									<br><span class="italic">Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman and AFM spectroscopy</span>
 									<br>J. Appl. Phys. 112, 063520-1-7 (2012)
 								</p>
-							<!-- </div> -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									T. Wiktorczyk, P. Biegański, <span class="bold">E. Zielony</span>
 									<br><span class="italic">Preparation and optical characterization of e-beam 	deposited cerium oxide films</span>
 									<br>Optical Materials 34, 2101–2107 (2012)
 								</p>
-							<!-- </div>  -->
-							<!-- <div class="article"> -->
 								<p class="article_p">
 									<span class="bold">E. Zielony</span>, E. Placzek-Popko, P. Dyba, Z. Gumienny, L. Dobaczewski and G.Karczewski
-									<br><span class="italic">Deep level 	transie nt spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe 	matrix</span>
+									<br><span class="italic">Deep level transient spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe matrix</span>
 									<br>J. Nanosci. Nanotechnol. 11, 6830-6836 (2011)
 								</p>
 							</div>
@@ -269,8 +276,5 @@
    			</div>
    		</main>
    	</body>
-   	<!-- <footer class="footer">
-   		<p>E.Zielony, 2017</p>
-   	</footer> -->
    	<script src="js/javascript.js"></script>
 </html>
