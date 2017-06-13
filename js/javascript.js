@@ -29,6 +29,7 @@ elementsPosition();
 
 function clickDiamond(target){
 	document.getElementById(target).scrollIntoView();
+	window.location.hash = target;
 }
 
 function scrollTo(to){
