@@ -1,8 +1,6 @@
 function elementsPosition (){
 	var x = window.innerWidth;
-	// var y = window.innerHeight;
 	var y = document.getElementById('start').offsetHeight;
-	// document.getElementById('start').setAttribute('style','height:'+y+'px');
 
 	var dHead = document.getElementById('header-diamond').offsetHeight;
 	var dImg = document.getElementById('img-diamond').offsetHeight;
@@ -31,9 +29,6 @@ elementsPosition();
 
 function clickDiamond(target){
 	document.getElementById(target).scrollIntoView();
-	// document.getElementById('body').setTimeout(clickDiamond, 1000);
-	// $('html, body').setTimeout(clickDiamond(target),1000);
-    //window.location.hash='#'+target;
 }
 
 function scrollTo(to){
@@ -48,9 +43,7 @@ var slideTime;
 
 function currentSlide(n) {
   slideIndex = n;
-  // showSlides();
   clearTimeout(slideTime);
-  // slideTime=setTimeout(showSlides, 15000);
   showSlides();
 }
 
@@ -63,19 +56,16 @@ function showSlides() {
     }
     slideIndex++;
     if (slideIndex> slides.length) {slideIndex = 1;}
-    slides[slideIndex-1].style.display = "block"; 
+    slides[slideIndex-1].style.display = "flex"; 
     slideTime=setTimeout(showSlides, 15000); 
     for(var k = 0; k<dots.length; k++){
     	dots[k].className = dots[k].className.replace(/active/,'');
     }
     console.log(slideIndex-1 + " " + dots[slideIndex-1].className);
-    dots[slideIndex-1].className += " active";
-    // dots.classList.remove("active");
-    // dots[slideIndex-2].className = dots[slideIndex-2].className.replace(/\bactive\b/,'');
+    dots[slideIndex-1].classList.add('active');
 }
 
 function projectDetails(id) {
-	// debugger;
 	var title, desc;
 	if(id[id.length-1]!='a'){
 		title = document.getElementById(id);
@@ -88,6 +78,29 @@ function projectDetails(id) {
 //						  [            if               ]? true : false ;
 	toggleClass(title);
 	toggleClass(desc);
+}
+
+//menu visible <->invisible
+document.getElementById('menu-button').addEventListener('click',function(){
+	var menuV = document.getElementById('menu');
+	if(menuV.style.visibility != 'visible'){
+		this.classList.add('menu-button_open');
+		document.getElementById('menu').style.visibility = 'visible';
+	}
+	else{
+		this.classList.remove('menu-button_open');
+		document.getElementById('menu').style.visibility = 'hidden';
+	}
+} );
+
+//hide menu after click on link
+var menuL = document.getElementsByClassName('menu-link');
+var hideAfter = function(){
+	document.getElementById('menu-button').classList.remove('menu-button_open');
+	document.getElementById('menu').style.visibility = 'hidden';
+};
+for (var i = 0; i<menuL.length; i++){
+	menuL[i].addEventListener('click', hideAfter, false);
 }
 
 function toggleClass(object){
