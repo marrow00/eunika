@@ -61,7 +61,6 @@ function showSlides() {
     for(var k = 0; k<dots.length; k++){
     	dots[k].className = dots[k].className.replace(/active/,'');
     }
-    console.log(slideIndex-1 + " " + dots[slideIndex-1].className);
     dots[slideIndex-1].classList.add('active');
 }
 
