@@ -328,6 +328,9 @@ img{
 	max-width: 300px;
 	width: 100%;
 	height: auto;
+	position: relative;
+    	top: 25px;
+    	left: 25px;
 	vertical-align: middle;
 	transform: rotate(-45deg);
 }
