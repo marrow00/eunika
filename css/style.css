@@ -16,7 +16,6 @@ h1 {
 	font-size: 3rem;
 	display: inline-block;
 	margin: 0;
-	/*text-align: center;*/
 	color: #fff;
 }
 
@@ -42,7 +41,6 @@ a{
 p{
 	margin: 0;
 	color: #282828;
-	/*color: #fff;*/
 }
 
 img{
@@ -269,7 +267,6 @@ img{
 .header-cnt{
 	transform: rotate(-45deg);
 	color: #fff;
-	/*cursor: default;*/
 }
 
 #contact-diamond {
@@ -500,15 +497,6 @@ img{
 .small_desc{
 	display: none;
 }
-.desc_past{
-	/*margin-top: 100px;*/
-}
-.desc_present{
-	/*margin-top: 100px;*/
-}
-.desc_future{
-	/*margin-top: 100px;*/
-}
 
 .me_dots{
 	position: absolute;
@@ -547,6 +535,7 @@ img{
 	/*-webkit-clip-path: url("#swg_s");*/
   	clip-path: url("#swg_s");
 }
+
 .contact{
 	height: auto;
 	width: 260px;
@@ -644,7 +633,6 @@ img{
 .lectures{
 	width: 100%;
 	height: 600px;
-	/*background-image: url(../images/lectures.jpeg);*/
 	background-image: linear-gradient(90deg,rgba(209, 88, 80,.6),rgba(0,100,90,.7)),url(../images/lectures.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -668,8 +656,6 @@ img{
 }
 
 .lecture {
-	/*flex-grow: 1;*/
-	/*display: inline-block;*/
 	display: flex;
     flex-direction: column;
     justify-content: center;
@@ -724,7 +710,6 @@ img{
 
 .subsection{
 	width: 100%;
-	/*height: 50px;*/
 	float: left;
 	padding: 10px 0 0 10px;
 }
@@ -846,7 +831,6 @@ img{
 		font-size: 14px;
 	}
 }
-
 /*e n d  o f  p r o j e c t s*/
 
 /*a r t i c l e s*/
@@ -870,7 +854,6 @@ img{
 }
 .italic{
 	font-style: italic;
-	/*color: #282828;*/
 }
 .bold{
 	font-weight: bold;
