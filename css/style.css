@@ -167,6 +167,9 @@ img{
 	opacity: 1;
 	left: 0;
 	background: #efce1a;
+	webkit-transition: .25s ease-in-out;
+  	-moz-transition: .25s ease-in-out;
+  	-o-transition:.25s ease-in-out;
 	transition: .25s ease-in-out;
 }
 
@@ -202,6 +205,9 @@ img{
 	overflow: auto;
 	background: #00645a;
 	visibility: hidden;
+	webkit-transition: widith 0.6s ease-in-out;
+  	-moz-transition: widith 0.6s ease-in-out;
+  	-o-transition: widith 0.6s ease-in-out;
 	transition: widith 0.6s ease-in-out;
 }
 
@@ -283,6 +289,9 @@ img{
 .menu-diamond{
 	cursor: pointer;
 	overflow: hidden;
+	webkit-transition: all 0.6s ease;
+  	-moz-transition: all 0.6s ease;
+  	-o-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 }
 
@@ -516,6 +525,9 @@ img{
   /*border-radius: 50%;*/
   transform: rotate(45deg);
   display: inline-block;
+  webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
