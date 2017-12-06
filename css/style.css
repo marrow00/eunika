@@ -135,11 +135,8 @@ img{
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	height: 240px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	height: 250px;
+	width: 140px
 }
 
 .menu-button {
@@ -198,11 +195,16 @@ img{
 .menu-list {
 	padding: 70px 0 0 20px;
 	margin: 0;
+	box-sizing: border-box;
 	width: 100%;
+	height: 100%;
 	text-align: left;
 	overflow: auto;
 	background: #00645a;
 	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	webkit-transition: widith 0.6s ease-in-out;
   	-moz-transition: widith 0.6s ease-in-out;
   	-o-transition: widith 0.6s ease-in-out;
@@ -457,9 +459,16 @@ img{
  	align-items: flex-end;
 }
 .section_title{
-	width: 200px;
+	width: 230px;
 	background-color: rgba(239, 206, 26,.9);
 	float: right;
+	padding-left: 5px;
+}
+
+@media(max-width: 850px){
+	.section_title{
+		width: 200px;
+	}
 }
 
 @media(max-width: 650px){
@@ -655,7 +664,7 @@ img{
 	flex-wrap: wrap;
 	float: left;
 	justify-content: center;
-	padding: 100px 10px 10px 50px;
+	padding: 100px 10px 90px 50px;
 	color: #fff;
 }
 
@@ -845,7 +854,11 @@ img{
 }
 
 .article{
+	-webkit-columns: 2 300px;
+     -moz-columns: 2 300px;
 	columns: 2 300px;
+	-webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
 	column-gap: 2em;
 	border: 1px rgba(209, 88, 80,.4) solid;
 	margin: 10px;
@@ -865,7 +878,11 @@ img{
 
 @media(max-width: 792px){
 	.article{
+		-webkit-columns: 2 250px;
+     	-moz-columns: 2 250px;
 		columns: 2 250px;
+		-webkit-column-gap: 1em;
+     	-moz-column-gap: 1em;
 		column-gap: 1em;
 	}
 	.article_p{
