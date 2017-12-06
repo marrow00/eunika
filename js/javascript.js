@@ -58,7 +58,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex> slides.length) {slideIndex = 1;}
     slides[slideIndex-1].style.display = "flex"; 
-    slideTime=setTimeout(showSlides, 15000); 
+    slideTime=setTimeout(showSlides, 35000); 
     for(var k = 0; k<dots.length; k++){
     	dots[k].className = dots[k].className.replace(/active/,'');
     }
