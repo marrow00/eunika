@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="pl">
 
   <head>
@@ -8,86 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="pwr, lpf">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext">
    </head>
 
    <body>
-   		<div class="mobile">
-   			<div class="mobile_title">
-   				<p>Trochę tu ciasno...</p>
-   			</div>
-   			<div class="mobile_desc">
-   				<p>Spróbuj odwrócić telefon albo otwórz tę stronę na tablecie lub komputerze.</p>
-   			</div>
-   		</div>
-   		<main>
-   			<div class="nav">
-   				<button id="menu-button" class="menu-button" type="button">
-                	<span class="menu-button_span"></span>
-                	<span class="menu-button_span"></span>
-                	<span class="menu-button_span"></span>
-                	<span class="menu-button_span"></span>
-              	</button>
-   				<ul class ="menu-list" id="menu">
-   					<li class="menu-item"><a href=#start class="menu-link">Strona główna</a></li>
-   					<li class="menu-item"><a href=#about class="menu-link">O mnie</a></li>
-   					<li class="menu-item"><a href=#classes class="menu-link">Dydaktyka</a></li>
-   					<li class="menu-item"><a href=#cooperation class="menu-link">Współpraca</a></li>
-   					<li class="menu-item"><a href=#projects class="menu-link">Projekty</a></li>
-   					<li class="menu-item"><a href=#articles class="menu-link">Artykuły</a></li>
-   					<li class="menu-item"><a href=#link class="menu-link">Linki</a></li>
-   				</ul>				
-   				
-   			</div>
-   			<div class="start" id="start">
-   				<div class="diamond" id="header-diamond">
-   					<h1 class="header-cnt">Eunika</h1>
-   				</div>
-   				<div class="diamond" id="img-diamond">
-   					<img src="images/ezielony.png" alt="Eunika 	Zielony" class="start-image">
-   				</div>
-   				<div class="diamond" id="contact-diamond">
-   					<h1 class="header-cnt">Zielony</h1>
-   				</div>
-   				<div class="diamond menu-diamond" id="menu_1" title="O mnie" onclick="clickDiamond('about')"></div>
-   				<div class="diamond menu-diamond" id="menu_2" title="Dydaktyka" onclick="clickDiamond('classes')"></div>
-   				<div class="diamond menu-diamond" id="menu_3" title="Praca naukowa" onclick="clickDiamond('science')"></div>
-   				<div class="diamond menu-diamond" id="menu_4" title="Linki" onclick="clickDiamond('link')"></div>
-   			</div>
+		<div class="nav">
+			<button id="menu-button" class="menu-button" type="button">
+				<span class="menu-button_span"></span>
+				<span class="menu-button_span"></span>
+				<span class="menu-button_span"></span>
+				<span class="menu-button_span"></span>
+      		</button>
+			<ul class ="menu-list" id="menu">
+				<li class="menu-item"><a href=#start>Strona główna</a></li>
+				<li class="menu-item"><a href=#about>O mnie</a></li>
+				<li class="menu-item"><a href=#classes>Dydaktyka</a></li>
+				<li class="menu-item"><a href=#cooperation>Współpraca</a></li>
+				<li class="menu-item"><a href=#projects>Projekty</a></li>
+				<li class="menu-item"><a href=#articles>Artykuły</a></li>
+				<li class="menu-item"><a href=#link>Linki</a></li>
+			</ul>				
+		</div>
+
+   		<main onclick="hideAfter()">
+
+	   		<div id="start">
+				<div class="header">
+					<h1 class="name">dr inż. Eunika Zielony</h1>
+				</div>
+				<div id="diamonds">
+					<div class="diamond" id="img-diamond"><img src="images/eunika_zielony.png" alt="Eunika Zielony" class="start-image"></div>
+					<div class="diamond menu-diamond" id="menu_1" title="O mnie" onclick="clickDiamond('about')"></div>
+					<div class="diamond menu-diamond" id="menu_2" title="Dydaktyka" onclick="clickDiamond('classes')"></div>
+					<div class="diamond menu-diamond" id="menu_3" title="Praca naukowa" onclick="clickDiamond('science')"></div>
+					<div class="diamond menu-diamond" id="menu_4" title="Linki" onclick="clickDiamond('link')"></div>
+				</div>
+			</div>
+
    			<div class="about_me" id="about">
-   				<div class="about_photo">
-   					<div class="section_marker"><div class="section_title"><h2>O mnie</h2></div></div>
+   				<div class="about_col">
+   					<div class="section_marker"><div class="section_title, about_title"><h2>O mnie</h2></div></div>
    					<div class="contact">
    						<div>
-   							<span>
-   								<img src="images/contact/location.png" class="contact_img">
-   								<a target="_blank" class="contact_link" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">231a A1</a>
-   							</span>
+   							<img src="images/contact/location.png" class="contact_img">
+   							<a target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">231a A1</a>
    						</div>
    						<div>
-   							<span>
-   								<img src="images/contact/phone.png" class="contact_img">
-   								<a href="tel:+48713202642" class="contact_link">+48713202642</a>
-   							</span>
+   							<img src="images/contact/phone.png" class="contact_img">
+   							<a href="tel:+48713202642">+48713202642</a>
    						</div>
    						<div>
-   							<span>
-								<img src="images/contact/mail.png" class="contact_img">
-								<a href="mailto:eunika.zielony@pwr.edu.pl" class="contact_link">eunika.zielony@pwr.edu.pl</a>
-							</span>
+   							<img src="images/contact/mail.png" class="contact_img">
+							<a href="mailto:eunika.zielony@pwr.edu.pl">eunika.zielony@pwr.edu.pl</a>
 						</div>
    					</div>
    				</div>
-				<div class="me_slides">	
+				<div class="me_slides">
    					<div class="me_description">
    						<p class="description">
-						Obecnie jestem nauczycielem akademickim i pracownikiem naukowym zatrudnionym na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej. Pracuję w Katedrze Technologii Kwantowych, w zespole Pani Prof. Ewy Popko, zajmującym się badaniem struktur półprzewodnikowych na bazie związków II-VI oraz III-V metodami elektrooptycznymi.
+						Obecnie jestem nauczycielem akademickim i&nbsp;pracownikiem naukowym zatrudnionym na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej. Pracuję w Katedrze Technologii Kwantowych, w zespole Pani Prof. Ewy Popko, zajmującym się badaniem struktur półprzewodnikowych na bazie związków II-VI oraz III-V metodami elektrooptycznymi.
 						</p>
 					</div>
 					<div class="me_description">
 						<p class="description">
-						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI <span class="big_desc">(ZnO, ZnMgO, CdTe, ZnTe, i in.)</span> mających zastosowanie w przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: <span class="big_desc">mikroskopia sił atomowych (AFM)</span><span class="small_desc" >AFM</span>, spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk <span class="big_desc">prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V)</span><span class="small_desc" >I-V orac C-V</span>, metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
+						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI <span class="big_desc">(ZnO, ZnMgO, CdTe, ZnTe, i in.)</span> mających zastosowanie w&nbsp;przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: <span class="big_desc">mikroskopia sił atomowych (AFM)</span><span class="small_desc" >AFM</span>, spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk <span class="big_desc">prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V)</span><span class="small_desc" >I-V orac C-V</span>, metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
 					</div>
 					<div class="me_dots">
 						<span class="dot" onclick="currentSlide(0)"></span>
@@ -95,20 +80,21 @@
 					</div>
 				</div>
    			</div>
+
    			<div class="lectures" id="classes">
    				<div class="section_marker"><div class="section_title"><h2>Dydaktyka</h2></div></div>
    				<div class="lectures_content">
-   					<a href="http://lpf.wppt.pwr.edu.pl/" target="_blank"><div class="lecture"><p>Laboratorium Podstaw Fizyki</p></div></a>
-   					<a href="http://www.if.pwr.wroc.pl/~popko/w4/w4.html" target="_blank"><div class="lecture"><p>Laboratorium Fizyki Przyrządów Półprzewodnikowych</p></div></a>
-   					<a href="http://www.if.pwr.wroc.pl/~popko/w12/w12.html" target="_blank"><div class="lecture"><p>Ćwiczenia z Fizyki Ogólnej</p></div></a>
+   					<a href="http://lpf.wppt.pwr.edu.pl/" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Podstaw Fizyki</p></div></a>
+   					<a href="http://www.if.pwr.wroc.pl/~popko/w4/w4.html" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Fizyki Przyrządów Półprzewodnikowych</p></div></a>
+   					<a href="http://www.if.pwr.wroc.pl/~popko/w12/w12.html" target="_blank" class="l-link"><div class="lecture"><p>Ćwiczenia z Fizyki Ogólnej</p></div></a>
    					<div class="lecture"><p>Wykład z Fizyki Przyrządów Półprzewodnikowych</p></div>
-   					<a href="informatyka.html"><div class="lecture"><p>Fizyczne podstawy współczesnej informatyki</p></div></a>
+   					<a href="informatyka.html" class="l-link"><div class="lecture"><p>Fizyczne podstawy współczesnej informatyki</p></div></a>
 				</div>
    			</div>
+
    			<div class="science" id="science">
-   				<div class="science_section_marker">
-   					<div class="section_marker"><h2 class="section_title science_title">Praca naukowa</h2></div>
-   				</div>
+   				<div class="section_marker"><h2 class="section_title science_title">Praca naukowa</h2></div>
+
 				<div class="science_el science_el-1" id="cooperation">
 					<div class="subsection"><h3>Współpraca</h3></div>
 					<div class="cooperation_columns">
@@ -139,7 +125,8 @@
 						</a>
 					</div>
 				</div>
-				<div class="science_el science_el-2" id="projects">
+
+				<div class="science_el" id="projects">
 					<div class="subsection"><h3>Projekty</h3></div>
 					<div class="projects_columns">
 						<div class="project" onclick="projectDetails('pr0')">
@@ -184,8 +171,8 @@
 						</div>
 					</div>
 				</div>
-   				
-   				<div class="science_el science_el-3" id="articles">
+
+   				<div class="science_el" id="articles">
    					<div class="subsection"><h3>Wybrane publikacje</h3></div>
    					<div class="articles_columns">
    						<div class="article">
@@ -228,23 +215,7 @@
    					</div>
    				</div>
    			</div>
-   			<svg width='0' height='0' position='fixed'>
-  				<defs>
-    				<clipPath id="swg_d" clipPathUnits="objectBoundingBox">
-      					<polygon points="0 0, 1 0, 1 0.85, 0 1" />
-    				</clipPath>
-  				</defs>
-  				<defs>
-    				<clipPath id="swg_h" clipPathUnits="objectBoundingBox">
-      					<polygon points="0 0.15, 1 0, 1 1, 0 1" />
-    				</clipPath>
-  				</defs>
-  				<defs>
-    				<clipPath id="swg_s" clipPathUnits="objectBoundingBox">
-      					<polygon points="0.15 0, 1 0, 1 1, 0 1" />
-    				</clipPath>
-  				</defs>
-			</svg>		
+   			
    			<div class="links" id="link">
    				<div class="section_marker"><div class="section_title"><h2>Linki</h2></div></div>
    				<div class="links_columns">
@@ -270,7 +241,10 @@
    					</div> 
 				</div>	
    			</div>
+
    		</main>
+
+   		<script src="js/javascript.js"></script>
+
    	</body>
-   	<script src="js/javascript.js"></script>
 </html>
