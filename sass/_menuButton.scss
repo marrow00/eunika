@@ -1,0 +1,51 @@
+@import '_mixins';
+
+.menu-button {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 15px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	overflow: visible;
+	display: block;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+
+.menu-button_span{
+	position: absolute;
+	display: block;
+	height: 4px;
+	width: 100%;
+	opacity: 1;
+	left: 0;
+	@include transition(.25s);
+	@include border-radius(3px);
+}
+
+.menu-button_span:nth-child(1){
+	top:0px;
+}
+.menu-button_span:nth-child(2),
+.menu-button_span:nth-child(3){
+	top:10px;
+}
+.menu-button_span:nth-child(4){
+	top:20px;
+}
+
+.menu-button_open .menu-button_span:nth-child(1){
+	width: 0%;
+}
+.menu-button_open .menu-button_span:nth-child(2){
+	transform: rotate(45deg);
+}
+.menu-button_open .menu-button_span:nth-child(3){
+	transform: rotate(-45deg);
+}
+.menu-button_open .menu-button_span:nth-child(4){
+	width: 0%;
+}
