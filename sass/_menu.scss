@@ -5,11 +5,11 @@
 	left: 0;
 	z-index: 9999;
 	height: 250px;
-	width: 140px
+	width: 160px;
 }
 
 .menu-list {
-	padding: 70px 0 0 20px;
+	padding: 65px 0 10px 20px;
 	margin: 0;
 	box-sizing: border-box;
 	width: 100%;
@@ -24,18 +24,15 @@
 }
 
 .menu-item {
-	display: block;
+	display: inherit;
 	list-style: none;
+	padding: 2px 0;
 	a {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: bold;
 		text-transform: uppercase;
-		// color: #fff;
 		cursor: pointer;
 		position: relative;
 		display: block;
-		// &:hover{
-		// 	color: #bbb;
-		// }
 	}
 }

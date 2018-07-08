@@ -1,12 +1,14 @@
-@import 'compass';
+@import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_mixins';
 @import '_menuButton';
 @import '_menu';
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
 
 html,body {
 	font-family:'Arima Madurai';
+	scroll-behavior: smooth;
 }
 
 .h{
@@ -127,10 +129,9 @@ img{
 	position: absolute;
 	text-align: center;
 	vertical-align: middle;
-	display: flex;
-	align-content: space-around;
-    justify-content: center;
-    flex-direction: column;
+	@include flexible(column,nowrap);
+	@include align-content(space-around);
+    @include justify-content(center);
     cursor: default;
 }
 .start-link {
@@ -199,9 +200,8 @@ img{
  	right: 0;
  	margin-top: 20px;
  	width: 100%;
- 	display: flex;
- 	flex-direction: column;
- 	align-items: flex-end;
+ 	@include flexible(column,nowrap);
+ 	@include align-items(flex-end);
 }
 .section_title{
 	width: 230px;
@@ -244,8 +244,8 @@ img{
 	padding: 20px 20px 50px 0;
 	text-align: justify;
 	display: none;
-	flex-direction: column;
-	justify-content: center;
+	@include flex-direction(column);
+	@include justify-content(center);
 	@media(max-width: $landscape){
 		padding: 160px 0 50px 35px;
 	}
@@ -266,7 +266,7 @@ img{
 	}
 }
 .big_desc{
-		display: inline;	
+	display: inline;	
 	@media(max-width: $tablet){
 		display: none;
 	}
@@ -320,14 +320,18 @@ img{
 }
 .contact{
 	height: auto;
-	width: 260px;
-    margin: 250px 10px 10px 0;
+	width: 270px;
+    margin: 300px 10px 10px 0;
     font-size: 1.2rem;
     float: right;
     color: $white;
+    	a{
+    		padding-left: 5px;
+    	}
     @media(max-width: $tablet){
-    	width: 210px;
+    	width: 225px;
 		font-size: 1rem;
+		margin-top: 320px;
     }
     @media(max-width: $landscape){
     	display: inline-block;
@@ -342,18 +346,15 @@ img{
 		display: inline-block;
     	padding: 15px 5px 0 5px;
 		}
-			a{
-				padding-left: 5px;
-			}
 	}
 }
 .contact_img{
 	max-width: 20px;
 	height: auto;
+	display: inline-block;
 	@media(max-width: $landscape){
     	float: left;
     	clear: both;
-    	display: inline-block;
 	}
 }
 
@@ -374,11 +375,9 @@ img{
 .lectures_content{
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	@include flexible(row, wrap);
+	@include justify-content(center);
 	float: left;
-	justify-content: center;
 	padding: 100px 10px 90px 50px;
 	color: $white;
 	@media(max-width: $phone){
@@ -397,9 +396,8 @@ img{
 	}
 }
 .lecture {
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	@include flexible(column, nowrap);
+    @include justify-content(center);
 	width: 200px;
 	height: 150px;
 	border: 1px $white solid;
@@ -457,10 +455,8 @@ img{
 
 // - - - C O O P E R A T I O N - - -
 .cooperation_columns{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	@include flexible(row, wrap);
+	@include justify-content(center);
 	clear: both;
 }
 .cooperation_company{
@@ -474,6 +470,11 @@ img{
 	@media(max-width: $tablet){
 		width: 100px;
 		height: 100px;
+	}
+	@media(max-width: $phone){
+		width: 90px;
+		height: 90px;
+		margin: 10px;
 	}
 }
 .company{
@@ -502,19 +503,16 @@ img{
 
 // - - - P R O J E C T S - - - 
 .projects_columns{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	@include flexible(row, wrap);
+	@include justify-content(center);
 	clear: both;
 }
 
 .project{
 	width: 300px;
 	height: 200px;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	@include flexible(column, nowrap);
+    @include justify-content(center);
 	border: 1px $pink solid;
 	text-align: center;
 	float: left;
@@ -554,8 +552,7 @@ img{
 
 // - - - A R T I C L E S - - -
 .articles_columns{
-	display: flex;
-	flex-direction: column;
+	@include flexible(column, nowrap);
 	clear: both;
 }
 .article{
@@ -586,8 +583,7 @@ img{
 }
 .links_columns{
 	padding: 50px 0 0 10px;
-	display: flex;
-	flex-direction: row;
+	@include flexible(row, nowrap);
 	float: left;
 }
 .link_div{

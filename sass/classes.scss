@@ -1,33 +1,36 @@
-html {
-	font-family:'Arima Madurai',sans-serif;
+@import 'compass/css3';
+@import '_reset';
+@import '_variables';
+@import '_mixins';
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
+
+
+html,body {
+	font-family:'Arima Madurai';
+	scroll-behavior: smooth;
 }
-body {
-	margin: 0;
-	padding: 0;
-}
-div {
-	display: block;
-	box-sizing: border-box;
-}
+
 h1 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	display: inline-block;
 	margin: 0;
 	align-items: center;
 	color: #fff;
+	@media (max-width: $tablet){
+		font-size: 1.5rem;
+	}
+	@media (max-width: $phone){
+		font-size: 1.3rem;
+	}
 }
-@media (min-width: 800px){
-    h1{
-        font-size: 2rem;
-    }
-}
+
 a{
 	text-decoration: none;
-	color: #282828;
+	color: $dark-grey;
 }
 p{
 	margin: 0;
-	color: #282828;
+	color: $dark-grey;
 }
 .container{
 	width: 100%;
@@ -51,7 +54,7 @@ button span{
     width: 20px;
     border-radius: 3px;
     opacity: 1;
-    background: #efce1a;
+    background: $mango;
     z-index: 10;
 }
 button span:nth-child(1){
@@ -68,41 +71,37 @@ button span:nth-child(2){
 	position: absolute;
     top: 20px;
     right: 0;
-	width: 320px;
-    background-color: #efce1a;
+	width: 250px;
+    background-color: $mango;
     padding-left: 5px;
+    @media(max-width: $tablet){
+    	width: 300px;
+    }
+    @media(max-width: $phone){
+    	width: 260px;
+    }
 }
 .lectures_box{
-	display: flex;
-	flex-direction: column;
+	@include flexible(column, nowrap);
 	clear: both;
-	padding: 110px 10px 0 10px;
+	padding: 100px 260px 0 10px;
+	@media(max-width: $tablet){
+		padding: 110px 10px 0 10px;
+	}
 }
 .info_box a{
 	color: #00645a;
 }
 .info{
 	color: #00645a;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
+	@media(max-width: $tablet){
+		font-size: 1.2rem;
+	}
 }
-@media (min-width: 800px){
-    .title_box{
-        width: 250px;
-    }
-    .lectures_box{
-        padding: 100px 260px 0 10px;
-    }
-    .info{
-        font-size: 1.5rem;
-    }
-}
+
 .materials{
-	webkit-columns: 4 100px;
-    -moz-columns: 4 100px;
-    columns: 4 100px;
-    -webkit-column-gap: 2em;
-    -moz-column-gap: 2em;
-    column-gap: 2em;
+	@include columns(4, 100px, 2em);
     text-align: center;
     padding: 10px;
     margin-top: 10px;
