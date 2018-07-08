@@ -1,5 +1,5 @@
 @mixin transition($time) {
-  	-webkit-transition: $time ease-in-out;
+  	webkit-transition: $time ease-in-out;
   	-moz-transition: $time ease-in-out;
   	-o-transition: $time ease-in-out;
 	transition: $time ease-in-out;
@@ -17,13 +17,6 @@
 	background-size: cover;
 }
 
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
-}
-
 @mixin clip-path($clip){
 	-webkit-clip-path: $clip;
 	-moz-clip-path: $clip;
@@ -38,4 +31,10 @@
 	-webkit-column-gap: $gap;
     -moz-column-gap: $gap;
 	column-gap: $gap;
+}
+
+@mixin flexible($direction, $wrap){
+	@include display-flex;
+	@include flex-direction($direction);
+	@include flex-wrap($wrap);
 }

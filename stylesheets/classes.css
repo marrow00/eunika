@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext");
+/* line 2, ../sass/_reset.scss */
+html, body {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, ../sass/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 21, ../sass/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 8, ../sass/classes.scss */
+html, body {
+  font-family: 'Arima Madurai';
+  scroll-behavior: smooth;
+}
+
+/* line 13, ../sass/classes.scss */
+h1 {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  /* line 13, ../sass/classes.scss */
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  /* line 13, ../sass/classes.scss */
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* line 27, ../sass/classes.scss */
+a {
+  text-decoration: none;
+  color: #282828;
+}
+
+/* line 31, ../sass/classes.scss */
+p {
+  margin: 0;
+  color: #282828;
+}
+
+/* line 35, ../sass/classes.scss */
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 39, ../sass/classes.scss */
+button {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 50, ../sass/classes.scss */
+button span {
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 20px;
+  border-radius: 3px;
+  opacity: 1;
+  background: #EFCE1A;
+  z-index: 10;
+}
+
+/* line 60, ../sass/classes.scss */
+button span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: -4px;
+  left: -4px;
+}
+
+/* line 65, ../sass/classes.scss */
+button span:nth-child(2) {
+  transform: rotate(45deg);
+  top: 4px;
+  left: -4px;
+}
+
+/* line 70, ../sass/classes.scss */
+.title_box {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 250px;
+  background-color: #EFCE1A;
+  padding-left: 5px;
+}
+@media (max-width: 900px) {
+  /* line 70, ../sass/classes.scss */
+  .title_box {
+    width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  /* line 70, ../sass/classes.scss */
+  .title_box {
+    width: 260px;
+  }
+}
+
+/* line 84, ../sass/classes.scss */
+.lectures_box {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  clear: both;
+  padding: 100px 260px 0 10px;
+}
+@media (max-width: 900px) {
+  /* line 84, ../sass/classes.scss */
+  .lectures_box {
+    padding: 110px 10px 0 10px;
+  }
+}
+
+/* line 92, ../sass/classes.scss */
+.info_box a {
+  color: #00645a;
+}
+
+/* line 95, ../sass/classes.scss */
+.info {
+  color: #00645a;
+  font-size: 1.5rem;
+}
+@media (max-width: 900px) {
+  /* line 95, ../sass/classes.scss */
+  .info {
+    font-size: 1.2rem;
+  }
+}
+
+/* line 103, ../sass/classes.scss */
+.materials {
+  -webkit-columns: 4 100px;
+  -moz-columns: 4 100px;
+  columns: 4 100px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px rgba(209, 88, 80, 0.4) solid;
+}
+
+/* line 110, ../sass/classes.scss */
+.materials p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
