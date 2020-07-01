@@ -1,0 +1,27 @@
+$base-font-family: sans-serif !default;
+html,body {
+	font-family: $base-font-family;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+*,*:before, *:after{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	&:active, &:hover{
+		outline: 0;
+	}
+}
+a:active,
+a:hover{
+	outline:0;
+}
+
+h1,h2,h3,p{
+	margin: 0;
+}

@@ -66,28 +66,27 @@ function projectDetails(id) {
 	toggleClass(title);
 	toggleClass(desc);
 }
-
+// MENU FUNCTIONS
+let menuButton = document.getElementById('menu-button');
+let menuList = document.getElementById('menu');
+let menuItems = menuList.children;
 //menu visible <->invisible
-document.getElementById('menu-button').addEventListener('click',function(){
-	var menuV = document.getElementById('menu');
-	if(menuV.style.visibility != 'visible'){
+menuButton.addEventListener('click',function(){
+	if(menuList.style.width != '100%'){
 		this.classList.add('menu-button_open');
-		document.getElementById('menu').style.visibility = 'visible';
-	}
-	else{
+		menuList.style.width = '100%';
+	}else{
 		this.classList.remove('menu-button_open');
-		document.getElementById('menu').style.visibility = 'hidden';
+		menuList.style.width = '0';
 	}
 } );
-
 //hide menu after click on link
-var menuL = document.getElementsByClassName('menu-item');
-var hideAfter = function(){
-	document.getElementById('menu-button').classList.remove('menu-button_open');
-	document.getElementById('menu').style.visibility = 'hidden';
+const hideAfter = function(){
+	menuButton.classList.remove('menu-button_open');
+	menuList.style.width = '0';
 };
-for (var i = 0; i<menuL.length; i++){
-	menuL[i].addEventListener('click', hideAfter, false);
+for (let i = 0; i<menuItems.length; i++){
+	menuItems[i].addEventListener('click', hideAfter, false);
 }
 
 function toggleClass(object){
