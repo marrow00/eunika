@@ -1,40 +1,27 @@
 function elementsPosition (){
-	var x = window.innerWidth;
-	var y = document.getElementById('diamonds').offsetHeight;
-	var dImg = document.getElementById('img-diamond').offsetHeight;
-	var wImg = document.getElementById('img-diamond').offsetWidth;
-	document.getElementById('img-diamond').setAttribute('style','top:'+parseInt((y-dImg)/3.5)+'px; left:'+parseInt((x-wImg)/2)+'px');
-	var hMenu = document.getElementById('menu_1').offsetHeight;
-	var wMenu = document.getElementById('menu_1').offsetWidth;
+	const x = window.innerWidth;
+	const y = document.getElementById('home').offsetHeight;
+	const bottom = document.getElementsByClassName('home-header')[0].offsetHeight;
+	const hMenu = document.getElementById('menu_1').offsetHeight;
+	const wMenu = document.getElementById('menu_1').offsetWidth;
 
 	document.getElementById('menu_1').setAttribute('style','top:'+parseInt((y-2*hMenu)/6)+'px; left:'+parseInt((x-2*wMenu)/3.5)+'px');
-	document.getElementById('menu_2').setAttribute('style','bottom:'+parseInt((y-2*hMenu)/2)+'px; left:'+parseInt((x-2*wMenu)/3.5)+'px');
+	document.getElementById('menu_2').setAttribute('style','bottom:'+parseInt((y-2*hMenu+bottom)/2)+'px; left:'+parseInt((x-2*wMenu)/3.5)+'px');
 	document.getElementById('menu_3').setAttribute('style','top:'+parseInt((y-2*hMenu)/6)+'px; right:'+parseInt((x-2*wMenu)/3.5)+'px');
-	document.getElementById('menu_4').setAttribute('style','bottom:'+parseInt((y-2*hMenu)/2)+'px; right:'+parseInt((x-2*wMenu)/3.5)+'px');
+	document.getElementById('menu_4').setAttribute('style','bottom:'+parseInt((y-2*hMenu+bottom)/2)+'px; right:'+parseInt((x-2*wMenu)/3.5)+'px');
 }
 
 window.onresize = elementsPosition;
 elementsPosition();
 
-function clickDiamond(target){
-	document.getElementById(target).scrollIntoView();
-	window.location.hash = target;
-}
-
-function scrollTo(to){
-	var t=document.getElementById('to');
-}
-
 var slideIndex = 0;
 showSlides();
 var slideTime;
-
 function currentSlide(n) {
   slideIndex = n;
   clearTimeout(slideTime);
   showSlides();
 }
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("me_description");
