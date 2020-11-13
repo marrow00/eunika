@@ -8,7 +8,7 @@ nav{
 	min-height: 18em;
 	height: 100%;
 }
-.menu-list {
+.menu{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -20,6 +20,7 @@ nav{
 	text-align: left;
 	overflow: auto;
 	transition: width ease-in .6s;
+	background-color: $green;
 	li{
 		margin: 0 1.5em;
 		list-style: none;
