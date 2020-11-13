@@ -8,376 +8,292 @@ html,body {
 	font-family:'Arima Madurai';
 	scroll-behavior: smooth;
 }
-
 .h{
 	display: inline-block;
 	margin: 0;
-	color: $white;	
+	color: white;	
 }
 h1{
 	@extend .h;
 	font-size: 3rem;
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		font-size: 2.1rem;
 	}
-	@media(max-width: $phone){
+	@media(max-width: $xs){
 		font-size: 1.9rem;
 	}
 }
 h2{
 	@extend .h;
 	font-size: 2rem;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 1.8rem;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		font-size: 1.5rem;
 	}
 }
 h3{
 	@extend .h;
 	font-size: 1.8rem;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 1.5rem;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		font-size: 1.3rem;
 	}
 }
-
 a{
-	color: $white;
+	color: white;
 	&:hover, &:focus{
 			color: $light-grey;
 		}
 }
-
 p{
 	margin: 0;
 	color: $dark-grey;
 }
-
 .italic{
 	font-style: italic;
 }
 .bold{
 	font-weight: bold;
 }
-
-img{
-	display: block;
-	max-width: 100%;
-    height: auto;
-}
-
-.menu-button_span{
-	background-color: $mango;
-}
-
-.menu-list{
-	background-color: $green;
-}
-
-// - - - S T A R T - - -
-#start {
+// - - - H O M E - - -
+.home{
 	width: 100%;
-	height: 700px;
-	border: 10px;
+	height: 75vh;
+	min-height: 450px;
 	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
-  	// clip-path: url("#swg_d");
-	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las.jpg);
+	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las1000.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
-	@media(max-width: $tablet){
-		height: 600px;
+	.home__container{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
 	}
-	@media(max-width: $landscape){
-		height: 500px;
+	.home__diamond{
+		width: 20vw;
+		min-width: 200px;
+		height: 20vw;
+		min-height: 200px;
+		transform: rotate(45deg);
+		background: rgba(white,.1);
+		border: .25em solid white;
+		border-radius: 1em;
+		text-align: center;
+		vertical-align: middle;
+		@include flexible(column,nowrap);
+		align-content: space-around;
+		justify-content: center;
+		overflow: hidden;
+		cursor: default;
+		.home__diamond_img{
+			// max-width: 300px;
+			width: 100%;
+			height: auto;
+			padding-top: 1em;
+			vertical-align: middle;
+			transform: rotate(-45deg);
+		}
 	}
-	@media(max-width: $phone){
-		height: 450px;
+	.home__header {
+		text-align: center;
+		padding-top: 4em;
 	}
-}
-
-.header {
-	width: 100%;
-	height: 100px;
-	position: absolute;
-	text-align: center;
-	bottom: 100px;
-	@media(max-width: $tablet){
-		bottom: 50px;
+	.home__menu{
+		position: absolute;
+		border: none;
+		background: none;
+		padding: 0;
+		width: 15vw;
+		img{
+			width: 100%;
+		}
 	}
-	@media(max-width: $phone){
-		bottom: 30px;
+	@media (orientation: portrait){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las400p.jpg);
 	}
-}
-
-#diamonds{
-	width: 100%;
-	height: 100%;
-	padding-bottom: 200px;
-}
-.diamond {
-	transform: rotate(45deg);
-	background: rgba($white,.1);
-	border: 5px solid $white;
-	position: absolute;
-	text-align: center;
-	vertical-align: middle;
-	@include flexible(column,nowrap);
-	// @include align-content(space-around);
-    // @include justify-content(center);
-    cursor: default;
-}
-.start-link {
-	color: $white;
-}
-.menu-diamond{
-	width: 100px;
-	height: 100px;
-	cursor: pointer;
-	overflow: hidden;
-	@include transition(0.6s);
-	@media(max-width: $tablet){
-		width: 80px;
-		height: 80px;
+	@media(min-width: $md) and (orientation:portrait), (min-width: $lg){
+		min-height: 600px;
+		.home__diamond{
+			min-width: 250px;
+			min-height: 250px;
+			border: .5em solid #fff;
+		}
+		.home__header{
+			padding-top: 6em;
+		}
 	}
-	@media(max-width: $landscape){
-		width: 60px;
-		height: 60px;
-	}
-	@media(max-width: $phone){
-		width: 40px;
-		height: 40px;
-	}
-}
-
-#menu_1{
-	@include background(url(../images/woman.png));
-}
-#menu_2{
-	@include background(url(../images/education.png));
-}
-#menu_3{
-	@include background(url(../images/science.png));
-}
-#menu_4{
-	@include background(url(../images/link.png));
-}
-
-#img-diamond {
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-	@media(max-width: $tablet){
-		width: 230px;
-		height: 230px;
-	}
-	@media(max-width: $landscape){
-		width: 170px;
-		height: 170px;
+	@media(min-width: $xl){
+		.home__menu{
+			width: 10vw;
+		}
 	}
 }
-.start-image{
-	max-width: 300px;
-	width: 100%;
-	height: auto;
-	position: relative;
-   	top: 15px;
-    left: 15px;
-	vertical-align: middle;
-	transform: rotate(-45deg);
-}
-
 // - - - S E C T I O N S - - -
 .section_marker{
  	position: absolute;
  	right: 0;
- 	margin-top: 20px;
+ 	margin-top: 2em;
  	width: 100%;
- 	@include flexible(column,nowrap);
- 	// @include align-items(flex-end);
+	@include flexible(column,nowrap);
+	align-items: flex-end;
+	z-index: 2;
 }
 .section_title{
-	width: 230px;
+	width: 10em;
 	background-color: $mango;
-	float: right;
-	padding-left: 5px;
-	@media(max-width: $tablet){
-		width: 205px;
+	// float: right;
+	padding-left: .5em;
+	@media(min-width: $md){
+		width: 13em;
 	}
-	@media(max-width: $landscape){
-		width: 180px;
+	@media(min-width: $lg){
+		width: 15em;
 	}
 }
-
 // - - - A B O U T - - -
-.about_me{
+.about{
 	width: 100%;
-	height: 500px;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
+	display: flex;
+	flex-direction: column;
  	// clip-path: url("#swg_d");
- 	@media(max-width: $landscape){
- 		height: 600px;
- 		@include clip-path(none);
+ 	@media(min-width: $md){
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		flex-direction: row-reverse;
  	}
 }
-.me_slides{
-	position: relative;
-	height: 100%;
-	margin: 0 300px 0 50px;
-	text-align: center;
-	@media(max-width: $tablet){
-		margin: 0 250px 0 50px;
+.about__col{
+	padding: 1em 1em 1em 3em;
+	@media(min-width: $md){
+		padding: 1em;
+		min-height: 24em;
 	}
-	@media(max-width: $landscape){
-		margin: 0 20px 0 20px;
+	@media(min-width: $lg){
+		min-height: 18em;
 	}
 }
-.me_description{
-	height: 100%;
-	padding: 20px 20px 50px 0;
-	text-align: justify;
-	display: none;
-	// @include flex-direction(column);
-	// @include justify-content(center);
-	@media(max-width: $landscape){
-		padding: 160px 0 50px 35px;
+.about__col_1{
+	min-height: 13em;
+	height:auto;
+	background: $green;
+	clip-path: polygon(100% 0,100% 100%,0 100%,0 35%);
+	.contact{
+		padding-top: 5em;
 	}
-}
-.description{
-	font-size: 1.2rem;
-	@media(max-width: $tablet) {
-		font-size: 16px;
+	.contact__link{
+		display: block;
+		padding: .25em 0;
+		.contact__link_img{
+			vertical-align: middle;
+		}
 	}
-	@media(max-width: $phone) {
-		font-size: 14px;
+	@media(min-width: $md){
+		min-width: 16em;
+		min-height: initial;
+		clip-path: none;
+		.contact{
+			padding-top: 12em;
+		}
 	}
-}
-.small_desc{
-	display: none;
-	@media(max-width: $tablet){
-		display: inline;
-	}
-}
-.big_desc{
-	display: inline;	
-	@media(max-width: $tablet){
-		display: none;
-	}
-}
-
-.me_dots{
-	position: absolute;
-    bottom: 30px;
-    display: inline-block;
-}
-.dot {
-	cursor:pointer;
-	height: 13px;
-	width: 13px;
-	margin: 0 2px;
-	background-color: $light-grey;
-	transform: rotate(45deg);
-	display: inline-block;
-	@include bg-trans(background-color 0.6s);
-	&:hover, .active{
-		background-color: $grey;
-	}
-}
-
-.about_col{
-	position: absolute;
-	width: 300px;
-	height: 500px;
-	right: 0;
-	background-color: $green;
-	@include clip-path(polygon(15% 0, 100% 0, 100% 100%, 0 100%));
-  	// clip-path: url("#swg_s");
-	@media(max-width: $tablet){
-		width:250px;
-	}
-	@media(max-width: $landscape){
-		height:auto;
-		min-height: 160px;
-		width: 100%;
-		@include clip-path(polygon(0 45%, 100% 0, 100% 100%, 0 100%));
-	}
-}
-.about_title{
-	@extend .section_title;
-	@media(max-width: $landscape){
-		margin-top: 15px;
-	}
-	@media(max-width: $phone){
-		width: 160px;
-	}
-}
-.contact{
-	height: auto;
-	width: 270px;
-    margin: 300px 10px 10px 0;
-    font-size: 1.2rem;
-    float: right;
-    color: $white;
-    	a{
-    		padding-left: 5px;
-    	}
-    @media(max-width: $tablet){
-    	width: 225px;
-		font-size: 1rem;
-		margin-top: 320px;
-    }
-    @media(max-width: $landscape){
-    	display: inline-block;
-    	height: auto;
-    	float: left;
-    	width: auto;
-    	margin: 0 0 0 60px;
-    	position: absolute;
-    	bottom: 10px;
-
-    	div{
-		display: inline-block;
-    	padding: 15px 5px 0 5px;
+	@media(min-width: $lg){
+		.contact{
+			padding-top: 7em;
 		}
 	}
 }
-.contact_img{
-	max-width: 20px;
-	height: auto;
-	display: inline-block;
-	@media(max-width: $landscape){
-    	float: left;
-    	clear: both;
+.about__col_2{
+	position: relative;
+	height: 30em;
+	@media(min-width:$xs){
+		height: 25em;
+	}
+	@media(min-width:$xs) and (orientation: landscape){
+		height: 18em
+	}
+	@media(min-width: $md){
+		height: auto;
 	}
 }
-
+.description{
+	display: none;
+	height: calc(100% - 3em);
+	flex-direction: column;
+	justify-content: center;
+	.small_desc{
+		display: none;
+		@media(max-width: $lg){
+			display: inline;
+		}
+	}
+	.big_desc{
+		display: inline;	
+		@media(max-width: $lg){
+			display: none;
+		}
+	}
+	@media(min-width: $md){
+		padding: 0 2em;
+	}
+	@media(min-width: $xl){
+		padding: 0 4em;
+	}
+}
+.about__dots{
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	.dot {
+		cursor:pointer;
+		height: 1.5em;
+		width: 1.5em;
+		margin: 0 .5em;
+		background-color: $light-grey;
+		border: none;
+		transform: rotate(45deg);
+		display: inline-block;
+		@include bg-trans(background-color 0.6s);
+		&:hover, .active{
+			background-color: $grey;
+		}
+	}
+	@media(min-width: $lg){
+		bottom: 2em;
+	}
+}
 // - - - L E C T U R E S - - - 
 .lectures{
 	width: 100%;
-	height: 600px;
+	// height: 600px;
+	height: 100vh;
+	min-height: 750px;
 	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
 	// clip-path: url("#swg_d");
-	z-index: -100;
-	@media(max-width: $phone){
-		height: 750px;
-	}
+	z-index: -1;
+	// @media(max-width: $xs){
+	// 	height: 750px;
+	// }
 }
 .lectures_content{
 	width: 100%;
 	height: 100%;
 	@include flexible(row, wrap);
+	justify-content: center;
 	// @include justify-content(center);
 	float: left;
 	padding: 100px 10px 90px 50px;
-	color: $white;
-	@media(max-width: $phone){
+	color: white;
+	@media(max-width: $xs){
 		    padding: 80px 10px 90px 50px;
 	}
 }
@@ -385,28 +301,29 @@ img{
 	display: block;
     height: auto;
     max-height: 160px;
-    @media(max-width: $tablet){
+    @media(max-width: $lg){
 		max-height: 130px;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		max-height: 110px;
 	}
 }
 .lecture {
 	@include flexible(column, nowrap);
+	justify-content: center;
     // @include justify-content(center);
 	width: 200px;
 	height: 150px;
-	border: 1px $white solid;
+	border: 1px white solid;
 	text-align: center;
 	padding: 5px;
 	margin: 10px;
-	background: rgba($white,.1);
-	@media(max-width: $tablet){
+	background: rgba(white,.1);
+	@media(max-width: $lg){
 		width: 170px;
 		height: 120px;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		width: 150px;
 		height: 100px;
 		margin: 0 5px 5px 5px;
@@ -414,11 +331,11 @@ img{
 }
 .lecture p{
 	font-size: 1.2rem;
-	color: $white;
-	@media(max-width: $tablet){
+	color: white;
+	@media(max-width: $lg){
 		font-size: 16px;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		font-size: 14px;
 	}
 }
@@ -427,10 +344,10 @@ img{
 .science{
 	width: 100%;
 }
-.science_section_marker{
-	width: 100%;
-	height: 100px;
-}
+// .science_section_marker{
+// 	width: 100%;
+// 	height: 100px;
+// }
 .science_el{
 	margin: 30px 30px 30px 50px;
 }
@@ -438,9 +355,9 @@ img{
 	padding-top: 70px;
     margin: 0 30px 30px 50px;
 }
-.science_title{
-	column-span: all;
-}
+// .science_title{
+// 	column-span: all;
+// }
 .subsection{
 	width: 100%;
 	float: left;
@@ -453,6 +370,7 @@ img{
 // - - - C O O P E R A T I O N - - -
 .cooperation_columns{
 	@include flexible(row, wrap);
+	justify-content: center;
 	// @include justify-content(center);
 	clear: both;
 }
@@ -464,11 +382,11 @@ img{
 	vertical-align: middle;
 	float: left;
 	margin: 20px;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		width: 100px;
 		height: 100px;
 	}
-	@media(max-width: $phone){
+	@media(max-width: $xs){
 		width: 90px;
 		height: 90px;
 		margin: 10px;
@@ -501,6 +419,7 @@ img{
 // - - - P R O J E C T S - - - 
 .projects_columns{
 	@include flexible(row, wrap);
+	justify-content: center;
 	// @include justify-content(center);
 	clear: both;
 }
@@ -509,17 +428,18 @@ img{
 	width: 300px;
 	height: 200px;
 	@include flexible(column, nowrap);
+	justify-content: center;
     // @include justify-content(center);
 	border: 1px $pink solid;
 	text-align: center;
 	float: left;
 	margin: 20px;
 	cursor: pointer;
-	background: rgba($white,.4);
+	background: rgba(white,.4);
 	&:hover{
 		background: linear-gradient(90deg,$pink,$light-green);
 	}
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		width: 250px;
 		height: 150px;
 		margin: 10px;
@@ -528,7 +448,7 @@ img{
 .project_title{
 	font-size: 1.2rem;
 	padding: 5px;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 15px;
 	}
 }
@@ -536,7 +456,7 @@ img{
 	padding: 5px;
 	text-align: left;
 	cursor: pointer;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 14px
 	}
 }
@@ -556,15 +476,14 @@ img{
 	@include columns(2, 300px, 2em);
 	border: 1px $pink solid;
 	margin: 10px;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		@include columns(2, 250px, 1em);
 	}
 }
 .article_p{
 	margin-bottom: 5px;
 	padding: 5px;
-	text-align: justify;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 14px;
 	}
 }
@@ -587,11 +506,11 @@ img{
 	margin-top: 30px;
 	width: 100px;
 	height: 100px;
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		width: 70px;
 		height: 70px;
 	}
-	@media(max-width: $phone){
+	@media(max-width: $xs){
 		width: 50px;
 		height: 50px;
 	}
