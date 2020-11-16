@@ -85,7 +85,7 @@ p{
 		transform: rotate(45deg);
 		background: rgba(white,.1);
 		border: .25em solid white;
-		border-radius: 1em;
+		// border-radius: 1em;
 		text-align: center;
 		vertical-align: middle;
 		@include flexible(column,nowrap);
@@ -202,8 +202,12 @@ p{
 		}
 	}
 	@media(min-width: $lg){
+		min-width: 20em;
 		.contact{
 			padding-top: 7em;
+		}
+		.contact__link_img{
+			padding-right: .25em;
 		}
 	}
 }
@@ -225,13 +229,13 @@ p{
 	height: calc(100% - 3em);
 	flex-direction: column;
 	justify-content: center;
-	.small_desc{
+	.description__text_shortcut{
 		display: none;
 		@media(max-width: $lg){
 			display: inline;
 		}
 	}
-	.big_desc{
+	.description__text_detailed{
 		display: inline;	
 		@media(max-width: $lg){
 			display: none;
@@ -285,7 +289,7 @@ p{
 		height: 50vh;
 	}
 	@media(min-width:$lg) and (orientation: portrait), (min-width:$xl){
-		height: 40vh;
+		height: 45vh;
 	}
 	.lectures__inner{
 		width: 100%;
@@ -324,77 +328,69 @@ p{
 // - - - S C I E N C E - - - 
 .science{
 	width: 100%;
-}
-// .science_section_marker{
-// 	width: 100%;
-// 	height: 100px;
-// }
-.science_el{
-	margin: 30px 30px 30px 50px;
-}
-.science_el-1{
-	padding-top: 70px;
-    margin: 0 30px 30px 50px;
-}
-// .science_title{
-// 	column-span: all;
-// }
-.subsection{
-	width: 100%;
-	// float: left;
-	padding-left: 10px;
+	.science__el{
+		margin: 1em 3em;
+	}
+	.science__el_first{
+		padding-top: 5em;
+		margin-top: 0;
+	}
 	h3{
 		color: $green;
 	}
 }
-
 // - - - C O O P E R A T I O N - - -
-.cooperation_columns{
+.cooperation{
 	@include flexible(row, wrap);
 	justify-content: center;
-	// @include justify-content(center);
-	clear: both;
+	vertical-align: middle;
 }
-.cooperation_company{
-	width: 150px;
-	height: 150px;
+.cooperation__company{
+	width: 6em;
+	height: 6em;
 	border: 1px $pink solid;
 	text-align: center;
-	vertical-align: middle;
-	// float: left;
-	margin: 20px;
-	@media(max-width: $lg){
-		width: 100px;
-		height: 100px;
-	}
-	@media(max-width: $xs){
-		width: 90px;
-		height: 90px;
-		margin: 10px;
+	margin: .5em;
+	@media(min-width: $md){
+		width: 9em;
+		height: 9em;
+		margin: 1em;
 	}
 }
-.company{
-	visibility: hidden;
+.cooperation__company_link{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	&:hover{
+		background: $pink;
+	}
+	&:hover .cooperation__company_name{
+		opacity:1;
+	}
+	.cooperation__company_name{
+		font-size: .65em;
+		opacity: 0;
+		@media(min-width:$md){
+			font-size: .9em;
+		}
+	}
 }
 .ifpan{
-	background-image: url(../images/logos/ifpan_logo.jpg);
-	background-size: cover;
+	background: center / cover no-repeat url(../images/logos/ifpan_logo.jpg);
 }
 .wemif{
-	background-image: url(../images/logos/wemif_logo.png);
-	background-size: cover;
+	background: center / cover no-repeat url(../images/logos/wemif_logo.png);
 }
 .imim{
-	background-image: url(../images/logos/imim_logo.png);
-	background-size: cover;
+	background: center / cover no-repeat url(../images/logos/imim_logo.png);
 }
 .tud{
-	background-image: url(../images/logos/tud_logo.png);
-	background-size: cover;
+	background: center / cover no-repeat url(../images/logos/tud_logo.png);
 }
 .unipress{
-	background-image: url(../images/logos/unipress_logo.png);
-	background-size: cover;
+	background: center / cover no-repeat url(../images/logos/unipress_logo.png);
 }
 
 // - - - P R O J E C T S - - - 
