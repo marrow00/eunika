@@ -1,3 +1,2 @@
-https://marrow00.github.io/eunika/
-
-http://if.pwr.edu.pl/~zielony/
+:rocket: :art:
+colorful website for an academic teacher
