@@ -149,7 +149,6 @@ p{
 .section_title{
 	width: 10em;
 	background-color: $mango;
-	// float: right;
 	padding-left: .5em;
 	@media(min-width: $md){
 		width: 13em;
@@ -271,72 +270,54 @@ p{
 // - - - L E C T U R E S - - - 
 .lectures{
 	width: 100%;
-	// height: 600px;
 	height: 100vh;
-	min-height: 750px;
+	min-height: 42em;
 	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
 	// clip-path: url("#swg_d");
 	z-index: -1;
-	// @media(max-width: $xs){
-	// 	height: 750px;
-	// }
-}
-.lectures_content{
-	width: 100%;
-	height: 100%;
-	@include flexible(row, wrap);
-	justify-content: center;
-	// @include justify-content(center);
-	float: left;
-	padding: 100px 10px 90px 50px;
-	color: white;
-	@media(max-width: $xs){
-		    padding: 80px 10px 90px 50px;
+	@media(min-width: $xs){
+		min-height: initial;
 	}
-}
-.l-link{
-	display: block;
-    height: auto;
-    max-height: 160px;
-    @media(max-width: $lg){
-		max-height: 130px;
+	@media(min-width:$md) and (orientation: portrait), (min-width:$lg){
+		height: 50vh;
 	}
-	@media(max-width: $md){
-		max-height: 110px;
+	@media(min-width:$lg) and (orientation: portrait), (min-width:$xl){
+		height: 40vh;
 	}
-}
-.lecture {
-	@include flexible(column, nowrap);
-	justify-content: center;
-    // @include justify-content(center);
-	width: 200px;
-	height: 150px;
-	border: 1px white solid;
-	text-align: center;
-	padding: 5px;
-	margin: 10px;
-	background: rgba(white,.1);
-	@media(max-width: $lg){
-		width: 170px;
-		height: 120px;
+	.lectures__inner{
+		width: 100%;
+		height: 100%;
+		@include flexible(row, wrap);
+		justify-content: center;
+		padding: 5em 1em 4em 1em;
+		@media(min-width: $md){
+			align-items: center;
+		}
 	}
-	@media(max-width: $md){
-		width: 150px;
-		height: 100px;
-		margin: 0 5px 5px 5px;
-	}
-}
-.lecture p{
-	font-size: 1.2rem;
-	color: white;
-	@media(max-width: $lg){
-		font-size: 16px;
-	}
-	@media(max-width: $md){
-		font-size: 14px;
+	.lecture {
+		flex-basis: 10em;
+		height: 6em;
+		border: 1px white solid;
+		text-align: center;
+		margin: .25em;
+		background: rgba(white,.1);
+		.lecture__link{
+			height: 100%;
+			width: 100%;
+			@include flexible(column, nowrap);
+			justify-content: center;
+		}
+		@media(min-width: $lg){
+			flex-basis: 11em;
+			height: 8em;
+			margin: .5em;
+			.lecture__link{
+				font-size: 1.1em;
+			}
+		}
 	}
 }
 
@@ -360,7 +341,7 @@ p{
 // }
 .subsection{
 	width: 100%;
-	float: left;
+	// float: left;
 	padding-left: 10px;
 	h3{
 		color: $green;
@@ -380,7 +361,7 @@ p{
 	border: 1px $pink solid;
 	text-align: center;
 	vertical-align: middle;
-	float: left;
+	// float: left;
 	margin: 20px;
 	@media(max-width: $lg){
 		width: 100px;
@@ -432,7 +413,7 @@ p{
     // @include justify-content(center);
 	border: 1px $pink solid;
 	text-align: center;
-	float: left;
+	// float: left;
 	margin: 20px;
 	cursor: pointer;
 	background: rgba(white,.4);
@@ -500,7 +481,7 @@ p{
 .links_columns{
 	padding: 50px 0 0 10px;
 	@include flexible(row, nowrap);
-	float: left;
+	// float: left;
 }
 .link_div{
 	margin-top: 30px;
