@@ -36,21 +36,6 @@ function showSlides() {
     }
     dots[slideIndex-1].classList.add('active');
 }
-
-// function projectDetails(id) {
-// 	let title, desc;
-// 	if(id[id.length-1]!='a'){
-// 		title = document.getElementById(id);
-// 		desc = document.getElementById(id + 'a');
-
-// 	}else{
-// 		title = document.getElementById(id.substr(0,id.length-1));
-// 		desc = document.getElementById(id);
-// 	}
-// //						  [            if               ]? true : false ;
-// 	toggleClass(title);
-// 	toggleClass(desc);
-// }
 // MENU FUNCTIONS
 const menuButton = document.getElementById('menu-button');
 const menuList = document.getElementById('menu');
@@ -73,12 +58,3 @@ const hideAfter = function(){
 for (let i = 0; i<menuItems.length; i++){
 	menuItems[i].addEventListener('click', hideAfter, false);
 }
-
-// function toggleClass(object){
-// 	var classes = object.getAttribute('class');
-// 	var output;
-// 	output = classes.replace('invisible','visible');
-// 	if(output == classes)
-// 		output = classes.replace('visible','invisible');
-// 	object.setAttribute('class',output);
-// }
