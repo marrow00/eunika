@@ -1,21 +1,9 @@
 @import '_reset';
 @import '_variables';
-@import '_mixins';
 @import '_menu';
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
-
-html,body {
-	font-family:'Arima Madurai';
-	scroll-behavior: smooth;
-}
-.h{
-	display: inline-block;
-	margin: 0;
-	color: white;	
-}
 h1{
-	@extend .h;
 	font-size: 3rem;
+	color: white;
 	@media(max-width: $md){
 		font-size: 2.1rem;
 	}
@@ -24,8 +12,8 @@ h1{
 	}
 }
 h2{
-	@extend .h;
 	font-size: 2rem;
+	color: white;
 	@media(max-width: $lg){
 		font-size: 1.8rem;
 	}
@@ -34,8 +22,8 @@ h2{
 	}
 }
 h3{
-	@extend .h;
 	font-size: 1.8rem;
+	color: $green;
 	@media(max-width: $lg){
 		font-size: 1.5rem;
 	}
@@ -46,7 +34,7 @@ h3{
 a{
 	color: white;
 	&:hover, &:focus{
-			color: $light-grey;
+			color: $mango;
 		}
 }
 p{
@@ -59,12 +47,11 @@ p{
 .bold{
 	font-weight: bold;
 }
-// - - - H O M E - - -
 .home{
 	width: 100%;
 	height: 75vh;
 	min-height: 450px;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las1000.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -85,19 +72,15 @@ p{
 		transform: rotate(45deg);
 		background: rgba(white,.1);
 		border: .25em solid white;
-		// border-radius: 1em;
-		text-align: center;
-		vertical-align: middle;
-		@include flexible(column,nowrap);
-		align-content: space-around;
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		overflow: hidden;
 		cursor: default;
 		.home__diamond_img{
-			// max-width: 300px;
 			width: 100%;
 			height: auto;
-			padding-top: 1em;
+			padding-top: 2em;
 			vertical-align: middle;
 			transform: rotate(-45deg);
 		}
@@ -136,20 +119,15 @@ p{
 		}
 	}
 }
-// - - - S E C T I O N S - - -
-.section_marker{
- 	position: absolute;
- 	right: 0;
- 	margin-top: 2em;
- 	width: 100%;
-	@include flexible(column,nowrap);
-	align-items: flex-end;
-	z-index: 2;
-}
 .section_title{
+	position: absolute;
+	top: 2em;
+	right: 0;
+	z-index: 2;
 	width: 10em;
+	min-width: fit-content;
 	background-color: $mango;
-	padding-left: .5em;
+	padding: 0 .5em;
 	@media(min-width: $md){
 		width: 13em;
 	}
@@ -157,12 +135,10 @@ p{
 		width: 15em;
 	}
 }
-// - - - A B O U T - - -
 .about{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
- 	// clip-path: url("#swg_d");
  	@media(min-width: $md){
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 		flex-direction: row-reverse;
@@ -262,7 +238,7 @@ p{
 		border: none;
 		transform: rotate(45deg);
 		display: inline-block;
-		@include bg-trans(background-color 0.6s);
+		transition: background-color 0.6s;
 		&:hover, .active{
 			background-color: $grey;
 		}
@@ -271,7 +247,6 @@ p{
 		bottom: 2em;
 	}
 }
-// - - - L E C T U R E S - - - 
 .lectures{
 	width: 100%;
 	height: 100vh;
@@ -279,22 +254,18 @@ p{
 	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
-	// clip-path: url("#swg_d");
-	z-index: -1;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	@media(min-width: $xs){
 		min-height: initial;
 	}
 	@media(min-width:$md) and (orientation: portrait), (min-width:$lg){
 		height: 50vh;
 	}
-	// @media(min-width:$lg) and (orientation: portrait), (min-width:$xl){
-	// 	height: 45vh;
-	// }
 	.lectures__inner{
 		width: 100%;
 		height: 100%;
-		@include flexible(row, wrap);
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		padding: 5em 1em 4.5em 1em;
 		@media(min-width: $md){
@@ -311,7 +282,8 @@ p{
 		.lecture__link{
 			height: 100%;
 			width: 100%;
-			@include flexible(column, nowrap);
+			display: flex;
+			flex-direction: column;
 			justify-content: center;
 		}
 		@media(min-width: $lg){
@@ -324,83 +296,75 @@ p{
 		}
 	}
 }
-// - - - S C I E N C E - - - 
 .science{
-	width: 100%;
 	.science__el{
-		margin: 2em 2em 2em 3em;
+		padding: 2em 2em 1em 3em;
 		@media(min-width: $md){
-			margin: 2em 3em;
+			padding: 2em 3em;
 		}
 	}
 	.science__el_first{
 		padding-top: 5em;
-		margin-top: 0;
-	}
-	h3{
-		color: $green;
 	}
 }
-// - - - C O O P E R A T I O N - - -
 .cooperation{
-	@include flexible(row, wrap);
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	vertical-align: middle;
-}
-.cooperation__company{
-	width: 6em;
-	height: 6em;
-	border: 1px $pink solid;
-	text-align: center;
-	margin: .5em;
-	@media(min-width: $md){
-		width: 8em;
-		height: 8em;
-		margin: 1em;
-	}
-	@media(min-width: $lg){
-		width: 9em;
-		height: 9em;
-		margin: 0 1em;
-	}
-}
-.cooperation__company_link{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	&:hover{
-		background: $pink;
-	}
-	&:hover .cooperation__company_name{
-		opacity:1;
-	}
-	.cooperation__company_name{
-		font-size: .65em;
-		opacity: 0;
-		@media(min-width:$md){
-			font-size: .9em;
+	.cooperation__company{
+		width: 6em;
+		height: 6em;
+		border: 1px $pink solid;
+		text-align: center;
+		margin: .5em;
+		@media(min-width: $md){
+			width: 8em;
+			height: 8em;
+			margin: 1em;
+		}
+		@media(min-width: $lg){
+			width: 9em;
+			height: 9em;
+			margin: 0 1em;
 		}
 	}
+	.cooperation__company_link{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		&:hover{
+			background: $pink;
+		}
+		&:hover .cooperation__company_name{
+			opacity:1;
+		}
+		.cooperation__company_name{
+			font-size: .65em;
+			opacity: 0;
+			@media(min-width:$md){
+				font-size: .9em;
+			}
+		}
+	}
+	.ifpan{
+		background: center / cover no-repeat url(../images/logos/ifpan_logo.jpg);
+	}
+	.wemif{
+		background: center / cover no-repeat url(../images/logos/wemif_logo.png);
+	}
+	.imim{
+		background: center / cover no-repeat url(../images/logos/imim_logo.png);
+	}
+	.tud{
+		background: center / cover no-repeat url(../images/logos/tud_logo.png);
+	}
+	.unipress{
+		background: center / cover no-repeat url(../images/logos/unipress_logo.png);
+	}
 }
-.ifpan{
-	background: center / cover no-repeat url(../images/logos/ifpan_logo.jpg);
-}
-.wemif{
-	background: center / cover no-repeat url(../images/logos/wemif_logo.png);
-}
-.imim{
-	background: center / cover no-repeat url(../images/logos/imim_logo.png);
-}
-.tud{
-	background: center / cover no-repeat url(../images/logos/tud_logo.png);
-}
-.unipress{
-	background: center / cover no-repeat url(../images/logos/unipress_logo.png);
-}
-
-// - - - P R O J E C T S - - - 
 .projects{
 	padding: .5em 0 0 .5em;
 	@media(min-width:$md){
@@ -430,57 +394,51 @@ p{
 		}
 	}
 }
-// - - - A R T I C L E S - - -
 .articles{
-	@include flexible(column, nowrap);
-}
-.articles__inner{
-	columns: 2 250px;
-	column-gap: 1em;
-	border: 1px $pink solid;
-	margin: .5em;
-	@media(min-width: $lg){
-		columns: 2 300px;
-		column-gap: 2em;
-		margin: 1em;
+	.articles__inner{
+		columns: 2 250px;
+		column-gap: 1em;
+		border: 1px $pink solid;
+		margin: .5em;
+		@media(min-width: $lg){
+			columns: 2 300px;
+			column-gap: 2em;
+			margin: 1em;
+		}
+	}
+	.articles__el{
+		margin-bottom: .5em;
+		padding: .5em;
 	}
 }
-.articles__el{
-	margin-bottom: .5em;
-	padding: .5em;
-}
-
-// - - - L I N K S - - -
 .links{
 	width: 100%;
-	// min-height: 12em;
 	background-color: $green;
-	@include clip-path(polygon(0 15%, 100% 0, 100% 100%, 0 100%));
-}
-.links__inner{
-	padding: 5em 1em 1em 1em;
-	@include flexible(row, wrap);
-	justify-content: space-evenly;
-	@media(min-width: $xl){
-		justify-content: start;
+	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+	.links__inner{
+		padding: 5em 1em 1em 1em;
+		display: flex;
+		justify-content: space-evenly;
+		@media(min-width: $xl){
+			justify-content: start;
+		}
 	}
-}
-.links__el{
-	width: 4em;
-	height: 4em;
-	@media(min-width: $xl){
-		width: 6em;
-		height: 6em;
-		margin: 0 1em;
+	.links__el{
+		width: 4em;
+		height: 4em;
+		@media(min-width: $xl){
+			width: 6em;
+			height: 6em;
+			margin: 0 1em;
+		}
 	}
-}
-.links__el_link{
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.links__el_img{
-	width: 100%;
-	height: auto;
+	.links__el_link{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.links__el_img{
+		width: 100%;
+		height: auto;
+	}
 }
