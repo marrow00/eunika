@@ -13,7 +13,7 @@ h1{
 }
 h2{
 	font-size: 2em;
-	color: white;
+	color: $green;
 	@media(max-width: $lg){
 		font-size: 1.8em;
 	}
@@ -52,7 +52,7 @@ p{
 	height: 75vh;
 	min-height: 450px;
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las1000.jpg);
+	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las400p.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
@@ -105,8 +105,8 @@ p{
 			width: 100%;
 		}
 	}
-	@media (orientation: portrait){
-		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las400p.jpg);
+	@media (min-width: $md){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las700p.jpg);
 	}
 	@media(min-width: $md) and (orientation:portrait), (min-width: $lg){
 		min-height: 600px;
@@ -119,7 +119,11 @@ p{
 			padding-top: 6em;
 		}
 	}
+	@media(min-width: $lg){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las1000.jpg);
+	}
 	@media(min-width: $xl){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las1200.jpg);
 		.home__menu{
 			width: 10vw;
 		}
@@ -257,15 +261,24 @@ p{
 	width: 100%;
 	height: 100vh;
 	min-height: 42em;
-	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
+	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures400p.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 	@media(min-width: $xs){
 		min-height: initial;
 	}
+	@media(min-width:$md){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures700p.jpeg);
+	}
 	@media(min-width:$md) and (orientation: portrait), (min-width:$lg){
 		height: 50vh;
+	}
+	@media(min-width:$lg){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures1000.jpeg);
+	}
+	@media(min-width:$xl){
+		background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures1200.jpeg);
 	}
 	.lectures__inner{
 		width: 100%;
