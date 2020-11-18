@@ -1,249 +1,247 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-  <head>
-    <title>dr inż. E.Zielony</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="pwr, lpf">
-    <link rel="stylesheet" href="stylesheets/base.css">
-   </head>
-
-   <body>
-		<div class="nav">
-			<button id="menu-button" class="menu-button" type="button">
-				<span class="menu-button_span"></span>
-				<span class="menu-button_span"></span>
-				<span class="menu-button_span"></span>
-				<span class="menu-button_span"></span>
-      		</button>
-			<ul class ="menu-list" id="menu">
-				<li class="menu-item"><a href=#start>Strona główna</a></li>
-				<li class="menu-item"><a href=#about>O mnie</a></li>
-				<li class="menu-item"><a href=#classes>Dydaktyka</a></li>
-				<li class="menu-item"><a href=#cooperation>Współpraca</a></li>
-				<li class="menu-item"><a href=#projects>Projekty</a></li>
-				<li class="menu-item"><a href=#articles>Artykuły</a></li>
-				<li class="menu-item"><a href=#link>Linki</a></li>
+	<head>
+		<title>dr inż. E.Zielony</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="dr inż. E.Zielony - nauczyciel akademicki na Politechnice Wrocławskiej">
+		<meta name="keywords" content="pwr, lpf">
+		<meta name="robots" content="index, follow">
+		<link rel="canonical" href="http://if.pwr.edu.pl/~zielony/">
+		<link rel="stylesheet" href="stylesheets/base.css">
+	</head>
+	<body>
+		<nav role="navigation">
+			<button id="menu-button" class="menu-button" type="button" aria-label="Przycisk menu">
+				<span></span><span></span><span></span><span></span>
+			</button>
+			<ul class ="menu" id="menu" role="menubar">
+				<li><a role="menuitem" href=#home>Strona główna</a></li>
+				<li><a role="menuitem" href=#o-mnie>O mnie</a></li>
+				<li><a role="menuitem" href=#dydaktyka>Dydaktyka</a></li>
+				<li><a role="menuitem" href=#wspolpraca>Współpraca</a></li>
+				<li><a role="menuitem" href=#projekty>Projekty</a></li>
+				<li><a role="menuitem" href=#artykuly>Artykuły</a></li>
+				<li><a role="menuitem" href=#linki>Linki</a></li>
 			</ul>				
-		</div>
-
-   		<main onclick="hideAfter()">
-
-	   		<div id="start">
-				<div class="header">
-					<h1 class="name">dr inż. Eunika Zielony</h1>
+		</nav>
+		<main onclick="hideAfter()">
+			<section class="home" id="home">
+				<div class="home__container">
+					<div class="home__diamond" id="img-diamond">
+						<picture>
+							<source srcset="images/eunika_zielony400.png" media="(min-width: 1300px)">
+							<source srcset="images/eunika_zielony300.png" media="(min-width: 900px)">
+							<img src="images/eunika_zielony240.png" alt="Eunika Zielony" class="home__diamond_img">
+						</picture>
+					</div>
+					<div class="home__header">
+						<h1 class="name">dr inż. Eunika Zielony</h1>
+					</div>
+					<button class="home__menu" id="menu_1" aria-label="O mnie">
+						<a href="#o-mnie"><img src="images/woman.svg" alt="o mnie"></a>
+					</button>
+					<button class="home__menu" id="menu_2" aria-label="Dydaktyka">
+						<a href="#dydaktyka"><img src="images/education.svg" alt="dydaktyka"></a>
+					</button>
+					<button class="home__menu" id="menu_3" aria-label="Praca naukowa">
+						<a href="#praca-naukowa"><img src="images/science.svg" alt="praca naukowa"></a>
+					</button>
+					<button class="home__menu" id="menu_4" aria-label="Linki">
+						<a href="#linki"><img src="images/link.svg" alt="linki"></a>
+					</button>
 				</div>
-				<div id="diamonds">
-					<div class="diamond" id="img-diamond"><img src="images/eunika_zielony.png" alt="Eunika Zielony" class="start-image"></div>
-					<div class="diamond menu-diamond" id="menu_1" title="O mnie" onclick="clickDiamond('about')"></div>
-					<div class="diamond menu-diamond" id="menu_2" title="Dydaktyka" onclick="clickDiamond('classes')"></div>
-					<div class="diamond menu-diamond" id="menu_3" title="Praca naukowa" onclick="clickDiamond('science')"></div>
-					<div class="diamond menu-diamond" id="menu_4" title="Linki" onclick="clickDiamond('link')"></div>
+			</section>
+			<section class="about" id="o-mnie">
+				<div class="section_title"><h2>O mnie</h2></div>
+				<div class="about__col about__col_1">
+					<div class="contact">
+						<a class="contact__link" target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">
+							<img class="contact__link_img" src="images/pin.svg" class="contact_img" alt="adres:">
+							231a A1
+						</a>
+						<a class="contact__link" href="tel:+48713202642">
+							<img class="contact__link_img" src="images/phone.svg" class="contact_img" alt="tel:">
+							+48713202642
+						</a>
+						<a class="contact__link" href="mailto:eunika.zielony@pwr.edu.pl">
+							<img class="contact__link_img" src="images/email.svg" class="contact_img" alt="mail:">
+							eunika.zielony@pwr.edu.pl
+						</a>
+					</div>
 				</div>
-			</div>
-
-   			<div class="about_me" id="about">
-   				<div class="about_col">
-   					<div class="section_marker"><div class="section_title, about_title"><h2>O mnie</h2></div></div>
-   					<div class="contact">
-   						<div>
-   							<img src="images/contact/location.png" class="contact_img" alt="adres:">
-   							<a target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">231a A1</a>
-   						</div>
-   						<div>
-   							<img src="images/contact/phone.png" class="contact_img" alt="tel:">
-   							<a href="tel:+48713202642">+48713202642</a>
-   						</div>
-   						<div>
-   							<img src="images/contact/mail.png" class="contact_img" alt="mail:">
-							<a href="mailto:eunika.zielony@pwr.edu.pl">eunika.zielony@pwr.edu.pl</a>
-						</div>
-   					</div>
-   				</div>
-				<div class="me_slides">
-   					<div class="me_description">
-   						<p class="description">
+				<div class="about__col about__col_2">
+					<div class="description">
+						<p class="description__text">
 						Obecnie jestem nauczycielem akademickim i&nbsp;pracownikiem naukowym zatrudnionym na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej. Pracuję w Katedrze Technologii Kwantowych, w zespole Pani Prof. Ewy Popko, zajmującym się badaniem struktur półprzewodnikowych na bazie związków II-VI oraz III-V metodami elektrooptycznymi.
 						</p>
 					</div>
-					<div class="me_description">
-						<p class="description">
-						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI <span class="big_desc">(ZnO, ZnMgO, CdTe, ZnTe, i in.)</span> mających zastosowanie w&nbsp;przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: <span class="big_desc">mikroskopia sił atomowych (AFM)</span><span class="small_desc" >AFM</span>, spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk <span class="big_desc">prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V)</span><span class="small_desc" >I-V orac C-V</span>, metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
+					<div class="description">
+						<p class="description__text">
+						Tematyka moich badań dotyczy struktur półprzewodnikowych, otrzymywanych ze związków II-VI <span class="description__text_detailed">(ZnO, ZnMgO, CdTe, ZnTe, i in.)</span> mających zastosowanie w&nbsp;przemyśle optoelektronicznym oraz fotowoltaicznym. Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, takich jak: <span class="description__text_detailed">mikroskopia sił atomowych (AFM)</span><span class="description__text_shortcut" >AFM</span>, spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk <span class="description__text_detailed">prądowo-napięciowych (I-V) oraz pojemnościowo-napięciowych (C-V)</span><span class="description__text_shortcut" >I-V orac C-V</span>, metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.</p>
 					</div>
-					<div class="me_dots">
-						<span class="dot" onclick="currentSlide(0)"></span>
-						<span class="dot" onclick="currentSlide(1)"></span>
-					</div>
-				</div>
-   			</div>
-
-   			<div class="lectures" id="classes">
-   				<div class="section_marker"><div class="section_title"><h2>Dydaktyka</h2></div></div>
-   				<div class="lectures_content">
-   					<a href="http://lpf.wppt.pwr.edu.pl/" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Podstaw Fizyki</p></div></a>
-   					<a href="http://www.if.pwr.wroc.pl/~popko/w4/w4.html" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Fizyki Przyrządów Półprzewodnikowych</p></div></a>
-   					<a href="http://www.if.pwr.wroc.pl/~popko/w12/w12.html" target="_blank" class="l-link"><div class="lecture"><p>Ćwiczenia z Fizyki Ogólnej</p></div></a>
-   					<div class="lecture"><p>Wykład z Fizyki Przyrządów Półprzewodnikowych</p></div>
-   					<a href="informatyka.html" class="l-link"><div class="lecture"><p>Fizyczne podstawy współczesnej informatyki</p></div></a>
-				</div>
-   			</div>
-
-   			<div class="science" id="science">
-   				<div class="section_marker"><h2 class="section_title science_title">Praca naukowa</h2></div>
-
-				<div class="science_el science_el-1" id="cooperation">
-					<div class="subsection"><h3>Współpraca</h3></div>
-					<div class="cooperation_columns">
-						<a target="_blank" href="http://www.ifpan.edu.pl/" class="link_a">	
-							<div class="cooperation_company ifpan" title="Instytut Fizyki Polskiej Akademii Nauk">
-								<p class="company invisible">Instytut Fizyki Polskiej Akademii Nauk, Warszawa</p>
-							</div>
-						</a>
-						<a target="_blank" href="http://wemif.pwr.edu.pl/" class="link_a">	
-							<div class="cooperation_company wemif" title="Wydział Elektroniki Mikrosystemów i Fotoniki, Politechnika Wrocławska">
-								<p class="company invisible">Wydział Elektroniki Mikrosystemów i Fotoniki, Politechnika Wrocławska</p>
-							</div>
-						</a>
-						<a target="_blank" href="http://www.imim.pl/" class="link_a">
-							<div class="cooperation_company imim" title="Instytut Metalurgii i Inżynierii Materiałowej im. Aleksandra 	Krupkowskiego PAN">
-								<p class="company invisible">Instytut Metalurgii i Inżynierii Materiałowej im. Aleksandra 	Krupkowskiego PAN, Kraków</p>
-							</div>
-						</a>
-						<a target="_blank" href="https://tu-dresden.de/" class="link_a">
-							<div class="cooperation_company tud" title="Politechnika w Dreźnie">
-								<p class="company invisible">Politechnika w Dreźnie, Niemcy</p>
-							</div>
-						</a>
-						<a target="_blank" href="https://www.unipress.waw.pl/" class="link_a">
-							<div class="cooperation_company unipress" title="Instytut Wysokich Ciśnień UNIPRESS">
-								<p class="company invisible">Instytut Wysokich Ciśnień UNIPRESS, Warszawa</p>
-							</div>
-						</a>
+					<div class="about__dots">
+						<button class="dot" onclick="currentSlide(0)" aria-label="kim jestem"></button>
+						<button class="dot" onclick="currentSlide(1)" aria-label="czym się zajmuję"></button>
 					</div>
 				</div>
-
-				<div class="science_el" id="projects">
-					<div class="subsection"><h3>Projekty</h3></div>
-					<div class="projects_columns">
-						<div class="project" onclick="projectDetails('pr0')">
-   								<p class="project_title visible" id= "pr0" >„Własności elektro-optyczne defektów w warstwach ZnO otrzymanych metodą LT ALD”</p>
-   								<p class="project_description invisible" id="pr0a">
-   									Projekt badawczy Opus 7
-   									<br>Nr projektu: 2013/11/B /ST7/01385
-									<br>Okres realizacji: 2014-2017
-									<br>Jednostka finansująca: NCN
-									<br>Funkcja w projekcie: wykonawca
-								</p>
+			</section>
+   			<section class="lectures" id="dydaktyka">
+   				<div class="section_title"><h2>Dydaktyka</h2></div>
+   				<div class="lectures__inner">
+   					<div class="lecture"><a href="http://lpf.wppt.pwr.edu.pl/" target="_blank" class="lecture__link">Laboratorium Podstaw Fizyki</a></div>
+   					<div class="lecture"><a href="http://www.if.pwr.wroc.pl/~popko/w4/w4.html" target="_blank" class="lecture__link">Laboratorium Fizyki Przyrządów Półprzewodnikowych</a></div>
+   					<div class="lecture"><a href="http://www.if.pwr.wroc.pl/~popko/w12/w12.html" target="_blank" class="lecture__link">Ćwiczenia z Fizyki Ogólnej</a></div>
+   					<div class="lecture"><a href="#" class="lecture__link">Wykład z Fizyki Przyrządów Półprzewodnikowych</a></div>
+   					<div class="lecture"><a href="informatyka.html" class="lecture__link">Fizyczne podstawy współczesnej informatyki</a></div>
+				</div>
+			</section>
+			<section class="science" id="praca-naukowa">
+				<div class="section_title"><h2>Praca naukowa</h2></div>
+				<section class="science__el science__el_first" id="wspolpraca">
+					<h3>Współpraca</h3>
+					<div class="cooperation">	
+						<div class="cooperation__company" title="Instytut Fizyki Polskiej Akademii Nauk">
+							<a target="_blank" href="http://www.ifpan.edu.pl/" class="cooperation__company_link ifpan">
+								<p class="cooperation__company_name">Instytut Fizyki Polskiej Akademii Nauk, Warszawa</p>
+							</a>
 						</div>
-						<div class="project" onclick="projectDetails('pr1')">
-								<p class="project_title visible" id="pr1">„Plasmonics for Photovoltaics: Enhancement of Solar Cell Efficiency”</p>
-								<p class="project_description invisible" id="pr1a">
-									Projekt badawczy Polish-Taiwanese Joint Research Call
-									<br>Nr projektu: DKO/PLTW1/3/2013
-									<br>Okres realizacji: 2014-2017
-									<br>Jednostka finansująca: NCBiR
-									<br>Funkcja w projekcie: wykonawca
-								</p>
+						<div class="cooperation__company" title="Wydział Elektroniki Mikrosystemów i Fotoniki, Politechnika Wrocławska">
+							<a target="_blank" href="http://wemif.pwr.edu.pl/" class="cooperation__company_link wemif">
+								<p class="cooperation__company_name">Wydział Elektroniki Mikrosystemów i Fotoniki, Politechnika Wrocławska</p>
+							</a>
 						</div>
-						<div class="project" onclick="projectDetails('pr2')">
-								<p class="project_title visible" id="pr2">„Charakteryzacja elektro-optyczna defektów w strukturach półprzewodnikowych na bazie CdTe, przeznaczonych na przyrządy fotowoltaiczne”</p>
-								<p class="project_description invisible" id="pr2a">
-									Projekt badawczy Iuventus Plus
-									<br>Nr projektu: IP2012 64872
-									<br>Okres realizacji: 2013-2016
-									<br>Jednostka finansująca: MNiSW
-									<br>Funkcja w projekcie: kierownik
-								</p>
+						<div class="cooperation__company" title="Instytut Metalurgii i Inżynierii Materiałowej im. Aleksandra 	Krupkowskiego PAN">
+							<a target="_blank" href="http://www.imim.pl/" class="cooperation__company_link imim">
+								<p class="cooperation__company_name">Instytut Metalurgii i Inżynierii Materiałowej im. Aleksandra 	Krupkowskiego PAN, Kraków</p>
+							</a>
 						</div>
-						<div class="project" onclick="projectDetails('pr3')">
-								<p class="project_title visible" id="pr3">„Aktywność elektryczna półprzewodnikowych nanokropek kwantowych”</p>
-								<p class="project_description invisible" id="pr3a">
-									Projekt badawczy własny
-									<br>Nr projektu: N N202 0911 33
-									<br>Okres realizacji: 2007-2010
-									<br>Jednostka finansująca: MNiSW
-									<br>Funkcja w projekcie: wykonawca
-   								</p>
+						<div class="cooperation__company" title="Politechnika w Dreźnie">
+							<a target="_blank" href="https://tu-dresden.de/" class="cooperation__company_link tud">
+								<p class="cooperation__company_name">Politechnika w Dreźnie, Niemcy</p>
+							</a>
+						</div>
+						<div class="cooperation__company" title="Instytut Wysokich Ciśnień UNIPRESS">
+							<a target="_blank" href="https://www.unipress.waw.pl/" class="cooperation__company_link unipress">
+								<p class="cooperation__company_name">Instytut Wysokich Ciśnień UNIPRESS, Warszawa</p>
+							</a>
 						</div>
 					</div>
-				</div>
-
-   				<div class="science_el" id="articles">
-   					<div class="subsection"><h3>Wybrane publikacje</h3></div>
-   					<div class="articles_columns">
-   						<div class="article">
-   								<p class="article_p">
-									W. Jacak, E. Popko, A. Henrykowski, <span class="bold">E. Zielony</span>, K. Gwozdz, G. Luka, R. Pietruszka, B. Witkowski, L. Wachnicki, M. Godlewski, Liann-Be Chang, Ming-Jer Jeng
-									<br><span class="italic">On the size dependence and spatial range for the plasmon effect in photovoltaic efficiency enhancement</span>
-									<br>Solar Energy Materials &amp; Solar Cells 147 1–16 (2016)
-								</p>
-								<p class="article_p">
-									<span class="bold">E. Zielony</span>, K. Olender, E. Płaczek-Popko, T. Wosiński, A. Racino, Z. Gumienny, G. Karczewski and S. Chusnutdinow
-									<br><span class="italic">Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by molecular beam epitaxy</span>
-									<br>Journal of Applied Physics, vol. 115, nr 24, art. 244501, s. 1-8 (2014)
-								</p>
-								<p class="article_p">
-									M. Pietrzyk, <span class="bold">E. Zielony</span>, M. Stachowicz, A. Reszka, E. Popko, A. Wierzbicka, E. Przeździecka, A. 	Droba, A. Kozanecki
-									<br><span class="italic">Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si (111) by PA-MBE method</span>
-									<br>Journal of Alloys and Compounds, vol. 587, s. 724-728 (2014)
-								</p>
-								<p class="article_p">
-									<span class="bold">E. Zielony</span>, E. Płaczek-Popko, P. Nowakowski, Z. Gumienny, A. Suchocki and G. Karczewski,
-									<br><span class="italic">Electro-optical characterization of Ti/Au-ZnTe Schottky diodes with&nbsp;CdTe&nbsp;quantum&nbsp;dots</span>
-									<br>Mat. Chem. 	Phys. 134, 821-828 (2012)
-								</p>
-								<p class="article_p">
-									<span class="bold">E. Zielony</span>, E. Placzek-Popko, A. Henrykowski, Z. Gumienny, P. Kamyczek, J. Jacak, P. Nowakowski, 	G. Karczewski
-									<br><span class="italic">Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman and AFM spectroscopy</span>
-									<br>J. Appl. Phys. 112, 063520-1-7 (2012)
-								</p>
-								<p class="article_p">
-									T. Wiktorczyk, P. Biegański, <span class="bold">E. Zielony</span>
-									<br><span class="italic">Preparation and optical characterization of e-beam 	deposited cerium oxide films</span>
-									<br>Optical Materials 34, 2101–2107 (2012)
-								</p>
-								<p class="article_p">
-									<span class="bold">E. Zielony</span>, E. Placzek-Popko, P. Dyba, Z. Gumienny, L. Dobaczewski and G.Karczewski
-									<br><span class="italic">Deep level transient spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe matrix</span>
-									<br>J. Nanosci. Nanotechnol. 11, 6830-6836 (2011)
-								</p>
+				</section>
+				<section class="science__el" id="projekty">
+					<h3>Projekty</h3>
+					<div class="projects">
+						<details class="projects__el">
+							<summary class="projects__el_title">Własności elektro-optyczne defektów w warstwach ZnO otrzymanych metodą LT ALD</summary>
+							<p class="projects__el_details">
+								Projekt badawczy Opus 7
+								<br>Nr projektu: 2013/11/B /ST7/01385
+								<br>Okres realizacji: 2014-2017
+								<br>Jednostka finansująca: NCN
+								<br>Funkcja w projekcie: wykonawca
+						 	</p>
+						</details>
+						<details class="projects__el">
+							<summary class="projects__el_title">Plasmonics for Photovoltaics: Enhancement of Solar Cell Efficiency</summary>
+							<p class="projects__el_details">
+								Projekt badawczy Polish-Taiwanese Joint Research Call
+								<br>Nr projektu: DKO/PLTW1/3/2013
+								<br>Okres realizacji: 2014-2017
+								<br>Jednostka finansująca: NCBiR
+								<br>Funkcja w projekcie: wykonawca
+							</p>
+						</details>
+						<details class="projects__el">
+							<summary class="projects__el_title">Charakteryzacja elektro-optyczna defektów w strukturach półprzewodnikowych na bazie CdTe, przeznaczonych na przyrządy fotowoltaiczne</summary>
+							<p class="projects__el_details">
+								Projekt badawczy Iuventus Plus
+								<br>Nr projektu: IP2012 64872
+								<br>Okres realizacji: 2013-2016
+								<br>Jednostka finansująca: MNiSW
+								<br>Funkcja w projekcie: kierownik
+							</p>
+						</details>
+						<details class="projects__el">
+							<summary class="projects__el_title">Aktywność elektryczna półprzewodnikowych nanokropek kwantowych</summary>
+							<p class="projects__el_details">
+								Projekt badawczy własny
+								<br>Nr projektu: N N202 0911 33
+								<br>Okres realizacji: 2007-2010
+								<br>Jednostka finansująca: MNiSW
+								<br>Funkcja w projekcie: wykonawca
+							</p>
+						</details>
+					</div>
+				</section>
+				<article class="science__el" id="artykuly">
+					<h3>Wybrane publikacje</h3>
+					<div class="articles">
+						<div class="articles__inner">
+							<p class="articles__el">
+								W. Jacak, E. Popko, A. Henrykowski, <span class="bold">E. Zielony</span>, K. Gwozdz, G. Luka, R. Pietruszka, B. Witkowski, L. Wachnicki, M. Godlewski, Liann-Be Chang, Ming-Jer Jeng
+								<br><span class="italic">On the size dependence and spatial range for the plasmon effect in photovoltaic efficiency enhancement</span>
+								<br>Solar Energy Materials &amp; Solar Cells 147 1–16 (2016)
+							</p>
+							<p class="articles__el">
+								<span class="bold">E. Zielony</span>, K. Olender, E. Płaczek-Popko, T. Wosiński, A. Racino, Z. Gumienny, G. Karczewski and S. Chusnutdinow
+								<br><span class="italic">Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by molecular beam epitaxy</span>
+								<br>Journal of Applied Physics, vol. 115, nr 24, art. 244501, s. 1-8 (2014)
+							</p>
+							<p class="articles__el">
+								M. Pietrzyk, <span class="bold">E. Zielony</span>, M. Stachowicz, A. Reszka, E. Popko, A. Wierzbicka, E. Przeździecka, A. 	Droba, A. Kozanecki
+								<br><span class="italic">Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si (111) by PA-MBE method</span>
+								<br>Journal of Alloys and Compounds, vol. 587, s. 724-728 (2014)
+							</p>
+							<p class="articles__el">
+								<span class="bold">E. Zielony</span>, E. Płaczek-Popko, P. Nowakowski, Z. Gumienny, A. Suchocki and G. Karczewski,
+								<br><span class="italic">Electro-optical characterization of Ti/Au-ZnTe Schottky diodes with&nbsp;CdTe quantum&nbsp;dots</span>
+								<br>Mat. Chem. 	Phys. 134, 821-828 (2012)
+							</p>
+							<p class="articles__el">
+								<span class="bold">E. Zielony</span>, E. Placzek-Popko, A. Henrykowski, Z. Gumienny, P. Kamyczek, J. Jacak, P. Nowakowski, 	G. Karczewski
+								<br><span class="italic">Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman and AFM spectroscopy</span>
+								<br>J. Appl. Phys. 112, 063520-1-7 (2012)
+							</p>
+							<p class="articles__el">
+								T. Wiktorczyk, P. Biegański, <span class="bold">E. Zielony</span>
+								<br><span class="italic">Preparation and optical characterization of e-beam 	deposited cerium oxide films</span>
+								<br>Optical Materials 34, 2101–2107 (2012)
+							</p>
+							<p class="articles__el">
+								<span class="bold">E. Zielony</span>, E. Placzek-Popko, P. Dyba, Z. Gumienny, L. Dobaczewski and G.Karczewski
+								<br><span class="italic">Deep level transient spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe matrix</span>
+								<br>J. Nanosci. Nanotechnol. 11, 6830-6836 (2011)
+							</p>
 						</div>
-   					</div>
-   				</div>
-   			</div>
-   			
-   			<div class="links" id="link">
-   				<div class="section_marker"><div class="section_title"><h2>Linki</h2></div></div>
-   				<div class="links_columns">
-   					<div class="link_div">
-   						<a target="_blank" href="http://www.leps.pwr.edu.pl/" class="link_a">
-   						<img src="images/logos/eps.png" alt="Laboratory for electrical properties of semiconductors">
-   						</a>
-   					</div>
-   					<div class="link_div">
-   						<a target="_blank" href="http://www.nlqt.wppt.pwr.edu.pl/index2.html" class="link_a">
-   						<img src="images/logos/nlqt.png" alt="National laboratory for quantum technologies">
-   						</a>
-   					</div>
-					<div class="link_div">
-   						<a target="_blank" href="http://pwr.edu.pl/" class="link_a">
-   						<img src="images/logos/pwr.png" alt="Politechnika Wrocławska">
-   						</a>
-   					</div>
-   					<div class="link_div">
-   						<a target="_blank" href="http://wppt.pwr.edu.pl/" class="link_a">
-   						<img src="images/logos/wppt.png" alt="Wydział podstawowych problemów techniki">
-   						</a>
-   					</div> 
+					</div>
+				</article>
+			</section>
+			<section class="links" id="linki">
+				<div class="section_title"><h2>Linki</h2></div>
+				<div class="links__inner">
+					<div class="links__el">
+						<a target="_blank" href="http://www.leps.pwr.edu.pl/" class="links__el_link">
+							<img src="images/logos/eps.png" class="links__el_img" alt="Laboratory for electrical properties of semiconductors">
+						</a>
+					</div>
+					<div class="links__el">
+						<a target="_blank" href="http://www.nlqt.wppt.pwr.edu.pl/index2.html" class="links__el_link">
+							<img src="images/logos/nlqt.png" class="links__el_img" alt="National laboratory for quantum technologies">
+						</a>
+					</div>
+					<div class="links__el">
+						<a target="_blank" href="http://pwr.edu.pl/" class="links__el_link">
+							<img src="images/logos/pwr.png" class="links__el_img" alt="Politechnika Wrocławska">
+						</a>
+					</div>
+					<div class="links__el">
+						<a target="_blank" href="http://wppt.pwr.edu.pl/" class="links__el_link">
+							<img src="images/logos/wppt.png" class="links__el_img" alt="Wydział podstawowych problemów techniki">
+						</a>
+					</div> 
 				</div>	
-   			</div>
-
-   		</main>
-
-   		<script src="js/javascript.js"></script>
-
-   	</body>
+			</section>
+		</main>
+		<script src="js/javascript.js"></script>
+	</body>
 </html>

@@ -1,4 +1,4 @@
-@import 'compass/css3';
+// @import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_mixins';
@@ -16,10 +16,10 @@ h1 {
 	margin: 0;
 	align-items: center;
 	color: #fff;
-	@media (max-width: $tablet){
+	@media (max-width: $lg){
 		font-size: 1.5rem;
 	}
-	@media (max-width: $phone){
+	@media (max-width: $xs){
 		font-size: 1.3rem;
 	}
 }
@@ -74,10 +74,10 @@ button span:nth-child(2){
 	width: 250px;
     background-color: $mango;
     padding-left: 5px;
-    @media(max-width: $tablet){
+    @media(max-width: $lg){
     	width: 300px;
     }
-    @media(max-width: $phone){
+    @media(max-width: $xs){
     	width: 260px;
     }
 }
@@ -85,7 +85,7 @@ button span:nth-child(2){
 	@include flexible(column, nowrap);
 	clear: both;
 	padding: 100px 260px 0 10px;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		padding: 110px 10px 0 10px;
 	}
 }
@@ -95,7 +95,7 @@ button span:nth-child(2){
 .info{
 	color: #00645a;
 	font-size: 1.5rem;
-	@media(max-width: $tablet){
+	@media(max-width: $lg){
 		font-size: 1.2rem;
 	}
 }
